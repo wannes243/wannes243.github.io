@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wannes Fraj | AI & Robotics Engineering Student</title>
+  <meta name="description"
+    content="Portfolio of Wannes Fraj — Industrial Computer Engineering student at ENET'Com, specializing in AI, Robotics, Embedded Systems and IoT." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">WF<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Open to Summer Internship 2026 · Monastir, Tunisia
+      </div>
+      <h1 class="hero-title">Hi, I'm <span class="gradient-text">Wannes Fraj</span></h1>
+      <p class="hero-subtitle" id="typewriter"></p>
+      <p class="hero-desc">
+        Industrial Computer Engineering student at <strong>ENET'Com</strong> — building end-to-end AI systems,
+        autonomous robots, and intelligent IoT solutions. From data pipelines to deployed models, from firmware to
+        full-stack apps.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary" id="hero-projects-btn">See My Projects</a>
+        <a href="mailto:wannesfrajj@gmail.com" class="btn btn-ghost" id="hero-email-btn">Get in Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">🥈</span><span class="stat-label">N8N Hackathon</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">🥉</span><span class="stat-label">IEEE TSYP 2025</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Projects</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">NVIDIA</span><span class="stat-label">DLI Certified</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-tag">About Me</div>
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-card-wrap">
+            <div class="about-avatar">
+              <div class="avatar-ring"></div>
+              <div class="avatar-inner">
+                <img src="IMG_1011.jpg" alt="Wannes Fraj" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+              </div>
+            </div>
+            <div class="floating-badge fb-1"><span class="fb-icon">🤖</span><span>AI &amp; ML</span></div>
+            <div class="floating-badge fb-2"><span class="fb-icon">🦾</span><span>Robotics</span></div>
+            <div class="floating-badge fb-3"><span class="fb-icon">📡</span><span>IoT / ESP32</span></div>
+          </div>
+        </div>
+        <div class="about-text">
+          <h2 class="section-title">Engineering with <span class="gradient-text">Intelligence</span></h2>
+          <p>I'm <strong>Wannes Fraj</strong>, an Industrial Computer Engineering student at <strong>ENET'Com
+              (Sfax)</strong>. My work spans two major domains: <em>Artificial Intelligence</em> — building ML
+            pipelines, agentic LLM systems, and deep learning models — and <em>Robotics &amp; Embedded Systems</em> —
+            designing real autonomous robots with ROS2, ESP32, and real-time control.</p>
+          <p>I've competed and won in national hackathons and IEEE competitions, earned an NVIDIA Deep Learning
+            certification, and I currently serve as Webmaster for the <strong>IEEE ENET'Com WIE</strong> student group.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item" id="hl-ai">
+              <div class="highlight-icon">🧠</div>
+              <div><strong>AI &amp; Machine Learning</strong><span>LLMs, RAG, LangChain, TensorFlow, PyTorch, XGBoost,
+                  NLP</span></div>
+            </div>
+            <div class="highlight-item" id="hl-robotics">
+              <div class="highlight-icon">🤖</div>
+              <div><strong>Robotics &amp; Autonomous Systems</strong><span>ROS2, Nav2, SLAM, LiDAR, Gazebo, Mecanum
+                  robots</span></div>
+            </div>
+            <div class="highlight-item" id="hl-embedded">
+              <div class="highlight-icon">⚡</div>
+              <div><strong>Embedded &amp; IoT</strong><span>ESP32, MQTT, Motor Control, Flutter, Real-time
+                  Firmware</span></div>
+            </div>
+          </div>
+          <a href="mailto:wannesfrajj@gmail.com" class="btn btn-primary" id="about-email-btn">Hire Me for Internship</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-tag">Technical Stack</div>
+      <h2 class="section-title">My <span class="gradient-text">Expertise</span></h2>
+      <p class="section-desc">A combined skill set from my AI and Robotics backgrounds — built through real projects and
+        competitions.</p>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <div class="skill-cat-header"><span class="skill-cat-icon">🧠</span><span>AI &amp; Machine Learning</span>
+          </div>
+          <div class="skill-pills">
+            <span class="pill">TensorFlow</span><span class="pill">PyTorch</span><span class="pill">Deep Learning</span>
+            <span class="pill">NLP</span><span class="pill">RAG</span><span class="pill">XGBoost</span>
+            <span class="pill">LSTM</span><span class="pill">Computer Vision</span><span
+              class="pill">Scikit-learn</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header"><span class="skill-cat-icon">🤖</span><span>AI Agentic Systems</span></div>
+          <div class="skill-pills">
+            <span class="pill">LangChain</span><span class="pill">LlamaIndex</span><span class="pill">HuggingFace</span>
+            <span class="pill">LLM Orchestration</span><span class="pill">Prompt Engineering</span>
+            <span class="pill">N8N</span><span class="pill">Agentic Workflows</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header"><span class="skill-cat-icon">🦾</span><span>Robotics &amp; Navigation</span>
+          </div>
+          <div class="skill-pills">
+            <span class="pill">ROS2</span><span class="pill">Nav2</span><span class="pill">SLAM</span>
+            <span class="pill">LiDAR</span><span class="pill">RViz</span><span class="pill">Gazebo</span>
+            <span class="pill">Path Planning</span><span class="pill">Sensor Fusion</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header"><span class="skill-cat-icon">⚙️</span><span>Embedded &amp; IoT</span></div>
+          <div class="skill-pills">
+            <span class="pill">ESP32</span><span class="pill">C / C++</span><span class="pill">MQTT</span>
+            <span class="pill">Motor Control</span><span class="pill">Real-Time Firmware</span>
+            <span class="pill">PROTEUS 8</span><span class="pill">Serial Comm</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header"><span class="skill-cat-icon">💻</span><span>Languages &amp; Frameworks</span>
+          </div>
+          <div class="skill-pills">
+            <span class="pill">Python</span><span class="pill">Java</span><span class="pill">JavaScript</span>
+            <span class="pill">C / C++</span><span class="pill">MATLAB</span><span class="pill">Dart (Flutter)</span>
+            <span class="pill">FastAPI</span><span class="pill">React.js</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header"><span class="skill-cat-icon">📊</span><span>Data &amp; Analytics</span></div>
+          <div class="skill-pills">
+            <span class="pill">NumPy</span><span class="pill">Pandas</span><span class="pill">Jupyter</span>
+            <span class="pill">Feature Engineering</span><span class="pill">Data Preprocessing</span>
+            <span class="pill">Matplotlib</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-tag">Projects</div>
+      <h2 class="section-title">What I've <span class="gradient-text">Built</span></h2>
+      <p class="section-desc">Real competition wins, deployed systems, and research-grade implementations.</p>
+      <div class="projects-grid">
+
+        <!-- 1 -->
+        <div class="project-card featured" id="proj-eventplanner">
+          <div class="project-glow"></div>
+          <div class="award-badge">🥈 2nd Place · N8N Hackathon</div>
+          <div class="project-header">
+            <div class="project-icon">🎯</div>
+            <div class="project-tags">
+              <span class="tag tag-automation">AI Agentic</span>
+              <span class="tag tag-software">Web</span>
+            </div>
+          </div>
+          <h3 class="project-title">EventPlanner – Agentic AI Chatbot</h3>
+          <p class="project-desc">Agentic event-planning chatbot that automates end-to-end event creation. Built LLM
+            orchestration pipelines with N8N for intent handling and data retrieval. Integrated REST APIs for real-time
+            event data. <strong>Secured 2nd place in a national AI hackathon.</strong></p>
+          <div class="project-tech"><span>N8N</span><span>LLMs</span><span>Agentic Workflows</span><span>REST
+              APIs</span></div>
+          <div class="project-year">2026</div>
+        </div>
+
+        <!-- 2 -->
+        <div class="project-card" id="proj-nav">
+          <div class="project-glow"></div>
+          <div class="award-badge award-bronze">🥉 3rd Place · IEEE TSYP 2025</div>
+          <div class="project-header">
+            <div class="project-icon">🚗</div>
+            <div class="project-tags">
+              <span class="tag tag-hardware">Robotics</span>
+            </div>
+          </div>
+          <h3 class="project-title">Autonomous Vehicle Navigation</h3>
+          <p class="project-desc">Autonomous navigation system using <strong>ROS2 Nav2</strong> for efficient delivery
+            tasks. Implemented SLAM with LiDAR for real-time mapping, localization, and obstacle avoidance. Fully
+            validated in Gazebo with RViz visualization.</p>
+          <div class="project-tech">
+            <span>ROS2</span><span>Nav2</span><span>LiDAR</span><span>SLAM</span><span>Gazebo</span><span>RViz</span>
+          </div>
+          <div class="project-year">2025</div>
+        </div>
+
+        <!-- 3 -->
+        <div class="project-card" id="proj-imm">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">🦾</div>
+            <div class="project-tags">
+              <span class="tag tag-hardware">Robotics</span>
+              <span class="tag tag-iot">IoT</span>
+            </div>
+          </div>
+          <h3 class="project-title">Intelligent Mobile Manipulator (IMM)</h3>
+          <p class="project-desc">Mobile robot with real-time <strong>MQTT-based wireless control</strong> and a Flutter
+            interface for teleoperation. Omnidirectional movement via Mecanum wheels, multi-DOF robotic arm. Full IoT
+            stack: ESP32 firmware, Mosquitto broker, mobile app.</p>
+          <div class="project-tech"><span>ESP32</span><span>MQTT</span><span>Flutter</span><span>C++</span><span>Robotic
+              Arm</span></div>
+          <div class="project-year">2026</div>
+        </div>
+
+        <!-- 4 -->
+        <div class="project-card" id="proj-cubesat">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">🛸</div>
+            <div class="project-tags">
+              <span class="tag tag-engineering">Deep Learning</span>
+              <span class="tag tag-engineering">Space</span>
+            </div>
+          </div>
+          <h3 class="project-title">CubeSat Thermal Prediction</h3>
+          <p class="project-desc">LSTM-based deep learning model to predict solar-facing orientations of CubeSat panels
+            for thermal risk assessment. Generated synthetic orbital datasets simulating temperature variations and
+            dynamic attitude changes. Applied OR algorithms for face-orientation classification.</p>
+          <div class="project-tech"><span>Python</span><span>LSTM</span><span>PyTorch</span><span>Operational
+              Research</span></div>
+          <div class="project-year">2025</div>
+        </div>
+
+        <!-- 5 -->
+        <div class="project-card" id="proj-bikeshare">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">🚲</div>
+            <div class="project-tags">
+              <span class="tag tag-software">ML</span>
+              <span class="tag tag-software">API</span>
+            </div>
+          </div>
+          <h3 class="project-title">ML-Powered Demand Forecasting</h3>
+          <p class="project-desc">XGBoost regression model trained on real-world data to forecast bicycle rental demand.
+            Built a <strong>FastAPI</strong> backend for real-time predictions and an interactive web dashboard for
+            visualization. Feature engineering and cross-validation for model generalization.</p>
+          <div class="project-tech"><span>Python</span><span>XGBoost</span><span>FastAPI</span><span>React.js</span>
+          </div>
+          <div class="project-year">2026</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="section-tag">Education &amp; Certifications</div>
+      <h2 class="section-title">My <span class="gradient-text">Background</span></h2>
+      <div class="edu-grid">
+
+        <div class="edu-card" id="edu-enetcom">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-body">
+            <div class="edu-period">2025 – Present · Sfax, Tunisia</div>
+            <h3>National Engineering School of Sfax (ENET'Com)</h3>
+            <p class="edu-degree">Industrial Computer Engineering</p>
+            <p class="edu-courses">Robotics · Embedded Systems · Control Systems · IoT · Signal Processing · AI
+              Fundamentals</p>
+          </div>
+        </div>
+
+        <div class="edu-card" id="edu-fsm">
+          <div class="edu-icon">🔬</div>
+          <div class="edu-body">
+            <div class="edu-period">2023 – 2025 · Monastir, Tunisia</div>
+            <h3>Faculty of Sciences of Monastir</h3>
+            <p class="edu-degree">Preparatory Cycle – Physics &amp; Chemistry</p>
+            <p class="edu-courses">Physics · Mechanics · Mathematics · Analytical Foundations</p>
+          </div>
+        </div>
+
+        <div class="edu-card cert-card" id="edu-nvidia">
+          <div class="edu-icon">🏅</div>
+          <div class="edu-body">
+            <div class="edu-period">2026 · NVIDIA DLI</div>
+            <h3>Deep Learning Certification</h3>
+            <p class="edu-degree">NVIDIA Deep Learning Institute</p>
+            <p class="edu-courses">Neural networks · CNNs · Model deployment · GPU-accelerated training</p>
+          </div>
+        </div>
+
+        <div class="edu-card cert-card" id="edu-ieee">
+          <div class="edu-icon">⚡</div>
+          <div class="edu-body">
+            <div class="edu-period">Jan 2026 – Present · IEEE ENET'Com WIE</div>
+            <h3>Webmaster — Volunteering</h3>
+            <p class="edu-degree">IEEE ENET'Com WIE Student Affinity Group</p>
+            <p class="edu-courses">Web presence · Digital communication · Robotics &amp; tech event coordination</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-tag">Contact</div>
+      <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+      <p class="section-desc">Looking for an internship in AI, Robotics, or Embedded Systems. Feel free to reach out!
+      </p>
+      <div class="contact-grid">
+        <div class="contact-info">
+
+          <div class="contact-item" id="contact-email">
+            <div class="contact-icon">📧</div>
+            <div><strong>Email</strong><a href="mailto:wannesfrajj@gmail.com">wannesfrajj@gmail.com</a></div>
+          </div>
+
+          <div class="contact-item" id="contact-phone">
+            <div class="contact-icon">📞</div>
+            <div><strong>Phone</strong><a href="tel:+21694550448">+216 94 550 448</a></div>
+          </div>
+
+          <div class="contact-item" id="contact-github">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </div>
+            <div><strong>GitHub</strong><a href="https://github.com/wannes-fraj" target="_blank"
+                rel="noopener">github.com/wannes-fraj</a></div>
+          </div>
+
+          <div class="contact-item" id="contact-location">
+            <div class="contact-icon">📍</div>
+            <div><strong>Location</strong><span>Monastir, Tunisia</span></div>
+          </div>
+
+          <div class="contact-availability">
+            <div class="avail-dot"></div>
+            <span>Open to Summer 2026 internships in AI / Robotics</span>
+          </div>
+
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="femail">Email</label>
+            <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" name="message" rows="5" placeholder="Tell me about the internship or project..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="form-submit-btn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-icon">→</span>
+          </button>
+          <div class="form-success" id="form-success">✅ Message sent! I'll get back to you soon.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">WF<span>.</span></span>
+        <p>Wannes Fraj — Industrial Computer Engineering Student @ ENET'Com</p>
+        <p class="footer-year">© <span id="year"></span> · Monastir, Tunisia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WELCOME MODAL -->
+  <div id="welcome-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">✕</button>
+      
+      <div class="modal-badge">
+        <span class="badge-dot"></span>
+        ACTIVELY SEEKING INTERNSHIP
+      </div>
+      
+      <img src="IMG_1011.jpg" alt="Wannes Fraj" class="modal-avatar">
+      
+      <h2 class="modal-title">Looking for a Summer Internship</h2>
+      
+      <p class="modal-text">
+        I'm a passionate engineering student actively seeking a <strong>Summer Internship</strong> in <strong>AI Development</strong> or <strong>Robotics Engineering</strong>. I'd love to bring my skills, energy, and drive to your team !
+      </p>
+      
+      <div class="modal-actions">
+        <a href="mailto:wannesfrajj@gmail.com" class="btn btn-primary modal-btn">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Hire Me
+        </a>
+        <div class="cv-dropdown-wrapper">
+          <button class="btn btn-ghost modal-btn" id="cv-dropdown-btn">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            View CVs
+          </button>
+          <div class="cv-dropdown-menu" id="cv-dropdown-menu">
+            <a href="CV%20AI.pdf" target="_blank" class="cv-item">🤖 CV - Artificial Intelligence</a>
+            <a href="ROBOTIC%20CV.pdf" target="_blank" class="cv-item">🦾 CV - Robotics & IoT</a>
+            <a href="CV%20EDGE%20AI.pdf" target="_blank" class="cv-item">⚡ CV - Edge AI</a>
+          </div>
+        </div>
+      </div>
+      
+      <a href="#projects" class="modal-link" id="modal-work-link">View My Work →</a>
+      
+      <div class="modal-socials">
+        <span class="social-label">FIND ME ON</span>
+        <div class="social-icons">
+          <a href="mailto:wannesfrajj@gmail.com"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+          <a href="https://www.linkedin.com/in/wannes-fraj-214820387/"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+          <a href="https://github.com/wannes243"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+          <a href="#"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
