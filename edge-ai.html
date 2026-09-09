@@ -1,0 +1,640 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#090b1b" name="theme-color" />
+    <meta
+      content="I connect perception to action. Explore my work in computer vision, autonomous robotics and embedded systems — from a ROS 2 pipeline to ESP32 firmware."
+      name="description"
+    />
+    <title>Wannes Fraj — Edge AI &amp; Robotics</title>
+    <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script defer="" src="script.js"></script>
+    <link href="robotics.css" rel="stylesheet" />
+    <link href="background-motion.css" rel="stylesheet" />
+    <script src="background-motion.js" defer></script>
+    <script defer="defer" src="robotics.js"></script>
+  </head>
+  <body class="world-edge edge-with-backdrop">
+    <div class="connection-backdrop" aria-hidden="true" data-entry-motion="hands">
+      <img
+        src="assets/edge-human-robot.webp"
+        alt=""
+        width="1536"
+        height="1024"
+        fetchpriority="high"
+      />
+    </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav aria-label="Main navigation" class="container nav">
+        <a
+          aria-label="Wannes Fraj — choose a world"
+          class="wordmark"
+          href="index.html"
+          ><span aria-hidden="true" class="monogram">wf</span
+          ><span>Wannes Fraj</span></a
+        >
+        <div aria-label="Portfolio worlds" class="world-tabs" role="group">
+          <a aria-current="page" href="edge-ai.html"
+            ><span aria-hidden="true" class="tab-dot edge-dot"></span>Edge AI
+            <span class="tab-extra">&amp; Robotics</span></a
+          ><a href="ai-automation.html"
+            ><span aria-hidden="true" class="tab-dot ai-dot"></span>AI
+            <span class="tab-extra">&amp;</span> Automation</a
+          >
+        </div>
+        <a class="nav-contact" href="#contact"
+          >Let’s talk <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+    <main id="main">
+      <section
+        aria-labelledby="world-title"
+        class="world-hero container robotics-intro"
+      >
+        <div class="world-hero-copy">
+          <a class="back-link" href="index.html">← Choose another world</a>
+          <h1 id="world-title">Intelligence,<br /><span>in motion.</span></h1>
+          <div class="actions">
+            <a class="button primary" href="#projects"
+              >Explore my projects <span aria-hidden="true">↗</span></a
+            ><a
+              class="text-link"
+              download="Wannes-Fraj-Edge-AI-CV.pdf"
+              href="cv%20edga%20ia.pdf"
+              >Download CV <span aria-hidden="true">↓</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <nav aria-label="In this world" class="world-subnav container">
+        <a href="#projects">Projects</a
+        ><a href="#experience">My experience</a
+        ><a href="#skills">Technologies</a><a href="#cv">My CV</a
+        ><a class="other-world" href="ai-automation.html"
+          >AI &amp; Automation <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+      <section
+        aria-labelledby="skills-title"
+        class="stack-showcase container"
+        id="skills"
+      >
+        <div class="stack-heading">
+          <p class="eyebrow">MY ROBOTICS TOOLKIT</p>
+          <h2 id="skills-title">Skills &amp; technologies.</h2>
+          <p>Explore the technologies I work with.</p>
+        </div>
+        <div
+          aria-label="Technologies, scroll horizontally to explore"
+          class="technology-rail"
+          role="region"
+          tabindex="0"
+        >
+          <ul class="technology-grid">
+            <li>
+              <span class="tech-icon icon-c"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/c.svg"
+                  width="64" /></span
+              ><span>C</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-cplusplus"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/cplusplus.svg"
+                  width="64" /></span
+              ><span>C++</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-esp32"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/esp32.svg"
+                  width="64" /></span
+              ><span>ESP32</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-platformio"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/platformio.svg"
+                  width="64" /></span
+              ><span>PlatformIO</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-ros"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/ros.svg"
+                  width="64" /></span
+              ><span>ROS 2</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-gazebo"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/gazebo.svg"
+                  width="64" /></span
+              ><span>Gazebo</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-python"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/python.svg"
+                  width="64" /></span
+              ><span>Python</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-numpy"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/numpy.svg"
+                  width="64" /></span
+              ><span>NumPy</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-pandas"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/pandas.svg"
+                  width="64" /></span
+              ><span>Pandas</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-scikitlearn"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/scikitlearn.svg"
+                  width="64" /></span
+              ><span>Scikit-learn</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-pytorch"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/pytorch.svg"
+                  width="64" /></span
+              ><span>PyTorch</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-tensorflow"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/tensorflow.svg"
+                  width="64" /></span
+              ><span>TensorFlow</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-opencv"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/opencv.svg"
+                  width="64" /></span
+              ><span>OpenCV</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-matlab"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/matlab.svg"
+                  width="64" /></span
+              ><span>MATLAB</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-mqtt"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/mqtt.svg"
+                  width="64" /></span
+              ><span>MQTT</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-websocket"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/websocket.svg"
+                  width="64" /></span
+              ><span>WebSocket</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-apachekafka"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/apachekafka.svg"
+                  width="64" /></span
+              ><span>Apache Kafka</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-mcp"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/mcp.svg"
+                  width="64" /></span
+              ><span>MCP</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-fastapi"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/fastapi.svg"
+                  width="64" /></span
+              ><span>FastAPI</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-javascript"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/javascript.svg"
+                  width="64" /></span
+              ><span>JavaScript</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-java"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/java.svg"
+                  width="64" /></span
+              ><span>Java</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-flutter"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/flutter.svg"
+                  width="64" /></span
+              ><span>Flutter</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-git"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/git.svg"
+                  width="64" /></span
+              ><span>Git</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-linux"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/linux.svg"
+                  width="64" /></span
+              ><span>Linux</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-docker"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/docker.svg"
+                  width="64" /></span
+              ><span>Docker</span>
+            </li>
+            <li>
+              <span class="tech-icon icon-kubernetes"
+                ><img
+                  alt=""
+                  height="64"
+                  loading="lazy"
+                  src="assets/tech/kubernetes.svg"
+                  width="64" /></span
+              ><span>Kubernetes</span>
+            </li>
+          </ul>
+        </div>
+        <details class="toolbox-more">
+          <summary>Perception, navigation &amp; development tools</summary>
+          <div class="specialist-tools">
+            <p>Perception &amp; navigation</p>
+            <div class="tags">
+              <span>YOLOv8</span><span>ByteTrack</span
+              ><span>Depth Anything V2</span><span>DeepFace / FaceNet</span
+              ><span>Nav2</span><span>SLAM</span><span>LiDAR</span
+              ><span>RViz</span>
+            </div>
+            <p>Development &amp; simulation</p>
+            <div class="tags">
+              <span>GitLab CI/CD</span><span>Mosquitto</span><span>Jupyter</span
+              ><span>Proteus 8</span><span>Motor control</span>
+            </div>
+          </div>
+        </details>
+      </section>
+      <section
+        aria-labelledby="projects-title"
+        class="robotics-projects container section"
+        id="projects"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PROJECTS &amp; FIELD EXPERIENCE</p>
+            <h2 id="projects-title">From the lab to the real world.</h2>
+          </div>
+          <p>
+            Explore the build, the technologies<br />and the work behind each
+            project.
+          </p>
+        </div>
+        <article class="internship-feature" id="experience">
+          <a
+            aria-label="Explore my experience at Enova Robotics"
+            class="internship-photo"
+            href="project-enova-person-following.html"
+            ><div class="evidence-photo robot-cover">
+              <img
+                alt="Enova Robotics mobile robot used for the person-following project"
+                decoding="async"
+                loading="eager"
+                src="assets/robotics/enova-robot.jpg"
+              />
+            </div>
+            <span class="internship-photo-label"
+              >ENOVA ROBOTICS / SUMMER 2026</span
+            ></a
+          >
+          <div class="internship-copy">
+            <p class="eyebrow">FEATURED / MY EXPERIENCE</p>
+            <p class="internship-company">Enova Robotics</p>
+            <h3>Teaching a robot<br />who to follow.</h3>
+            <p>
+              A real-time person-following system, from a custom dataset to
+              perception and control through four ROS 2 nodes.
+            </p>
+            <div class="tags">
+              <span>ROS 2</span><span>Python</span><span>YOLOv8</span
+              ><span>ByteTrack</span><span>Depth Anything V2</span
+              ><span>DeepFace / FaceNet</span>
+            </div>
+            <div class="internship-meta">
+              <span>Deep Learning &amp; Computer Vision</span
+              ><span>June – July 2026 · Sousse, Tunisia</span>
+            </div>
+            <a class="button primary" href="project-enova-person-following.html"
+              >Explore my experience <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </article>
+        <div class="robotics-project-grid">
+          <article class="robotics-card" id="proj-tsyp">
+            <a
+              class="robotics-card-link"
+              href="project-tsyp-autonomous-delivery.html"
+              ><div class="robotics-card-visual">
+                <div class="evidence-photo tsyp-card-photo">
+                  <img
+                    alt="TSYP 13 RAS and VTS challenge third-place certificate presented to the IEEE ENET’Com team"
+                    decoding="async"
+                    height="1067"
+                    loading="lazy"
+                    src="assets/robotics/tsyp13-award.jpg"
+                    width="800"
+                  />
+                </div>
+                <span class="project-award">3rd place · TSYP 13</span>
+              </div>
+              <div class="robotics-card-copy">
+                <div class="project-type">
+                  <span>Multi-agent robotics</span><span>IEEE RAS × VTS</span>
+                </div>
+                <h3>Autonomous Delivery Fleet</h3>
+                <div class="tags">
+                  <span>ROS 2</span><span>LiDAR</span><span>Gazebo</span
+                  ><span>D-VRP</span><span>V2V communication</span>
+                </div>
+                <span class="case-link"
+                  >View project details <span aria-hidden="true">↗</span></span
+                >
+              </div></a
+            >
+          </article>
+          <article class="robotics-card" id="proj-shutters">
+            <a
+              class="robotics-card-link"
+              href="project-smart-home-shutters.html"
+              ><div class="robotics-card-visual">
+                <div class="evidence-photo rotated-photo">
+                  <img
+                    alt="Connected shutter prototype controlled from a Flutter phone application"
+                    decoding="async"
+                    loading="lazy"
+                    src="assets/robotics/shutters-demo-2.png"
+                  />
+                </div>
+              </div>
+              <div class="robotics-card-copy">
+                <div class="project-type">
+                  <span>Embedded systems &amp; IoT</span><span>2026</span>
+                </div>
+                <h3>Smart Home Shutters</h3>
+                <div class="tags">
+                  <span>ESP32</span><span>C++</span><span>BLE</span
+                  ><span>MQTT</span><span>Flutter</span><span>PlatformIO</span>
+                </div>
+                <span class="case-link"
+                  >View project details <span aria-hidden="true">↗</span></span
+                >
+              </div></a
+            >
+          </article>
+          <article class="robotics-card" id="proj-cubesat">
+            <a class="robotics-card-link" href="project-cubesat-thermal.html"
+              ><div class="robotics-card-visual">
+                <div class="evidence-photo thermal-cover">
+                  <img
+                    alt="CubeSat orbiting Earth, illuminated by the Sun — conceptual illustration"
+                    height="1024"
+                    loading="lazy"
+                    src="assets/cubesat-orbit.webp"
+                    width="1536"
+                  /><span>CubeSat in orbit · Concept illustration</span>
+                </div>
+              </div>
+              <div class="robotics-card-copy">
+                <div class="project-type">
+                  <span>Embedded AI &amp; time-series learning</span
+                  ><span>2025</span>
+                </div>
+                <h3>CubeSat Thermal Prediction</h3>
+                <div class="tags">
+                  <span>Python</span><span>PyTorch</span><span>LSTM</span
+                  ><span>NumPy</span><span>Operational research</span>
+                </div>
+                <span class="case-link"
+                  >View project details <span aria-hidden="true">↗</span></span
+                >
+              </div></a
+            >
+          </article>
+        </div>
+      </section>
+      <section aria-labelledby="cv-title" class="cv-section" id="cv">
+        <div class="container cv-layout">
+          <div>
+            <p class="eyebrow">GO A LITTLE DEEPER</p>
+            <h2 id="cv-title">My Edge AI &amp; Robotics CV.</h2>
+            <p>The experience, projects and skills behind this world.</p>
+          </div>
+          <a
+            class="cv-download"
+            download="Wannes-Fraj-Edge-AI-CV.pdf"
+            href="cv%20edga%20ia.pdf"
+            ><span aria-hidden="true" class="cv-file">PDF</span>
+            <div>
+              <h3>Wannes Fraj</h3>
+              <p>Edge AI &amp; Robotics · Download CV</p>
+            </div>
+            <span aria-hidden="true" class="download-arrow">↓</span></a
+          >
+        </div>
+      </section>
+      <section
+        aria-labelledby="contact-title"
+        class="section container contact-section"
+        id="contact"
+      >
+        <div>
+          <p class="eyebrow">Open to internship opportunities</p>
+          <h2 id="contact-title">Let’s build<br />something that works.</h2>
+          <p>
+            Interested in AI engineering, applied machine learning,<br
+              class="desktop-break"
+            />
+            MLOps or intelligent embedded systems? Let’s talk.
+          </p>
+          <div class="email-row">
+            <a class="email-link" href="mailto:wannesfrajj@gmail.com"
+              >wannesfrajj@gmail.com <span aria-hidden="true">↗</span></a
+            ><button
+              aria-label="Copy email address"
+              class="copy-email"
+              hidden=""
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                fill="none"
+                height="20"
+                viewbox="0 0 24 24"
+                width="20"
+              >
+                <rect
+                  height="12"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  width="12"
+                  x="8"
+                  y="8"
+                ></rect>
+                <path
+                  d="M15 5V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h1"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <p aria-live="polite" class="copy-status" role="status"></p>
+        </div>
+        <div class="contact-links">
+          <a
+            href="https://www.linkedin.com/in/wannes-fraj-214820387/"
+            rel="noopener noreferrer"
+            target="_blank"
+            >LinkedIn <span aria-hidden="true">↗</span></a
+          ><a
+            href="https://github.com/wannes243"
+            rel="noopener noreferrer"
+            target="_blank"
+            >GitHub <span aria-hidden="true">↗</span></a
+          ><a href="tel:+21694550448"
+            >+216 94 550 448 <span aria-hidden="true">↗</span></a
+          >
+          <p>Based in Monastir, Tunisia</p>
+        </div>
+      </section>
+      <aside class="container world-bridge">
+        <div>
+          <p class="eyebrow">THERE’S ANOTHER SIDE TO MY WORK</p>
+          <h2>Explore AI &amp; Automation.</h2>
+        </div>
+        <a class="button secondary" href="ai-automation.html"
+          >Enter the other world <span aria-hidden="true">↗</span></a
+        >
+      </aside>
+    </main>
+    <footer class="container footer">
+      <a class="wordmark" href="index.html"
+        ><span aria-hidden="true" class="monogram">wf</span
+        ><span>Wannes Fraj</span></a
+      >
+      <p>© <span id="year">2026</span> Wannes Fraj</p>
+      <a href="art/thermal-study.html"
+        >Generative visual study <span aria-hidden="true">↗</span></a
+      >
+    </footer>
+  </body>
+</html>

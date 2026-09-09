@@ -1,0 +1,330 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#090b1b" name="theme-color" />
+    <meta
+      content="From a camera stream to a robot that follows an identified person: a complete perception and control pipeline developed at Enova Robotics."
+      name="description"
+    />
+    <title>Intelligent Person Following — Wannes Fraj</title>
+    <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script defer="" src="script.js"></script>
+    <link href="robotics.css" rel="stylesheet" />
+    <script defer="defer" src="robotics.js"></script>
+  </head>
+  <body class="world-edge robotics-case">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav aria-label="Main navigation" class="container nav">
+        <a
+          aria-label="Wannes Fraj — choose a world"
+          class="wordmark"
+          href="index.html"
+          ><span aria-hidden="true" class="monogram">wf</span
+          ><span>Wannes Fraj</span></a
+        >
+        <div aria-label="Portfolio worlds" class="world-tabs" role="group">
+          <a aria-current="page" href="edge-ai.html"
+            ><span aria-hidden="true" class="tab-dot edge-dot"></span>Edge AI
+            <span class="tab-extra">&amp; Robotics</span></a
+          ><a href="ai-automation.html"
+            ><span aria-hidden="true" class="tab-dot ai-dot"></span>AI
+            <span class="tab-extra">&amp;</span> Automation</a
+          >
+        </div>
+        <a class="nav-contact" href="#contact"
+          >Let’s talk <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+    <main class="container case-main" id="main">
+      <a class="back-link" href="edge-ai.html#projects"
+        >← All robotics projects</a
+      >
+      <header class="case-header">
+        <p class="eyebrow">
+          Enova Robotics / June – July 2026
+        </p>
+        <h1>Intelligent Person Following</h1>
+        <p class="case-intro">
+          From a camera stream to a robot that follows an identified person: a
+          complete perception and control pipeline developed at Enova Robotics.
+        </p>
+        <div class="tags">
+          <span>ROS 2</span><span>Python</span><span>YOLOv8</span
+          ><span>ByteTrack</span><span>Depth Anything V2</span
+          ><span>DeepFace / FaceNet</span> <span>OpenCV</span>
+        </div>
+        <div class="actions">
+          <a
+            class="button primary"
+            href="https://github.com/wannes243/enova_person_follower"
+            rel="noopener noreferrer"
+            target="_blank"
+            >View project on GitHub <span aria-hidden="true">↗</span></a
+          ><a class="text-link" href="#case-details">Explore the details ↓</a>
+        </div>
+      </header>
+      <div class="case-cover">
+        <div class="evidence-photo robot-cover">
+          <img
+            alt="Enova Robotics mobile robot used for the person-following project"
+            decoding="async"
+            loading="eager"
+            src="assets/robotics/enova-robot.jpg"
+          />
+        </div>
+      </div>
+      <div class="case-layout" id="case-details">
+        <aside class="case-facts">
+          <div>
+            <span>MY ROLE</span
+            ><strong>Deep Learning &amp; Computer Vision</strong>
+          </div>
+          <div>
+            <span>CONTEXT</span
+            ><strong>Enova Robotics · Sousse, Tunisia</strong>
+          </div>
+          <div><span>PERIOD</span><strong>June – July 2026</strong></div>
+          <a
+            class="text-link"
+            download="Wannes-Fraj-Edge-AI-CV.pdf"
+            href="cv%20edga%20ia.pdf"
+            >Download my Edge AI CV ↓</a
+          >
+        </aside>
+        <div>
+          <section class="case-section">
+            <h2>The objective</h2>
+            <p>
+              Build a real-time system that detects a person, identifies the
+              intended target, estimates their distance and passes this
+              information to a following controller.
+            </p>
+          </section>
+          <section class="case-section">
+            <h2>My contribution</h2>
+            <p>
+              I designed four communicating ROS 2 nodes, created a dataset from
+              self-captured photos, trained a YOLOv8 person detector and
+              integrated tracking, facial recognition and depth estimation.
+            </p>
+          </section>
+          <section class="case-section">
+            <h2>Detection, identity and distance</h2>
+            <p>
+              YOLOv8 provides person detections, ByteTrack maintains tracks, and
+              DeepFace with FaceNet identifies the target. Depth Anything V2
+              adds distance estimation to the perception pipeline.
+            </p>
+          </section>
+          <section class="case-section">
+            <h2>From development to outdoor tests</h2>
+            <p>
+              The supplied captures document the training dataset, target
+              recognition, depth maps and an outdoor tracking test. The robot
+              photograph shows the physical platform used for the project.
+            </p>
+          </section>
+        </div>
+      </div>
+      <div class="pipeline">
+        <div class="pipeline-heading">
+          <p class="eyebrow">Inside the Enova system</p>
+          <p>From a camera frame to a follow command.</p>
+        </div>
+        <div class="pipeline-nodes">
+          <details open="">
+            <summary>
+              <span class="node-step">01 / INPUT</span
+              ><strong>Camera stream</strong
+              ><span aria-hidden="true" class="node-toggle">+</span>
+            </summary>
+            <p>Streams the camera frames into the ROS 2 perception pipeline.</p>
+          </details>
+          <details>
+            <summary>
+              <span class="node-step">02 / PERCEPTION</span
+              ><strong>Person detector</strong
+              ><span aria-hidden="true" class="node-toggle">+</span>
+            </summary>
+            <p>
+              YOLOv8 detects people, ByteTrack maintains tracks, and DeepFace /
+              FaceNet identifies the target.
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span class="node-step">03 / ESTIMATION</span
+              ><strong>Distance estimator</strong
+              ><span aria-hidden="true" class="node-toggle">+</span>
+            </summary>
+            <p>
+              Depth Anything V2 estimates distance from the detected person.
+            </p>
+          </details>
+          <details>
+            <summary>
+              <span class="node-step">04 / CONTROL</span
+              ><strong>Follow controller</strong
+              ><span aria-hidden="true" class="node-toggle">+</span>
+            </summary>
+            <p>
+              Uses the perception and distance information to control
+              person-following behavior.
+            </p>
+          </details>
+        </div>
+      </div>
+      <section aria-labelledby="gallery-title" class="case-gallery">
+        <p class="eyebrow">PROJECT PHOTOS</p>
+        <h2 id="gallery-title">A closer look at the work.</h2>
+        <p class="gallery-intro">Select a photo to view it in full.</p>
+        <div class="gallery-grid">
+          <figure>
+            <a
+              aria-label="Enlarge image: The Enova Robotics platform"
+              class="gallery-link"
+              data-caption="The Enova Robotics platform"
+              data-rotate="false"
+              href="assets/robotics/enova-robot.jpg"
+              rel="noopener"
+              target="_blank"
+              ><div class="evidence-photo">
+                <img
+                  alt="The Enova Robotics platform"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/robotics/enova-robot.jpg"
+                />
+              </div>
+              <span class="zoom-label">View full image ↗</span></a
+            >
+            <figcaption>
+              <strong>The Enova Robotics platform</strong>
+              <p>The mobile robotic platform used for the project.</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <a
+              aria-label="Enlarge image: Outdoor person tracking"
+              class="gallery-link"
+              data-caption="Outdoor person tracking"
+              data-rotate="false"
+              href="assets/robotics/enova-person-tracking.jpg"
+              rel="noopener"
+              target="_blank"
+              ><div class="evidence-photo">
+                <img
+                  alt="Outdoor person tracking"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/robotics/enova-person-tracking.jpg"
+                />
+              </div>
+              <span class="zoom-label">View full image ↗</span></a
+            >
+            <figcaption>
+              <strong>Outdoor person tracking</strong>
+              <p>
+                Detection and target position displayed during an outdoor test.
+              </p>
+            </figcaption>
+          </figure>
+          <figure>
+            <a
+              aria-label="Enlarge image: Recognition and depth estimation"
+              class="gallery-link"
+              data-caption="Recognition and depth estimation"
+              data-rotate="false"
+              href="assets/robotics/enova-recognition-depth.jpg"
+              rel="noopener"
+              target="_blank"
+              ><div class="evidence-photo">
+                <img
+                  alt="Recognition and depth estimation"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/robotics/enova-recognition-depth.jpg"
+                />
+              </div>
+              <span class="zoom-label">View full image ↗</span></a
+            >
+            <figcaption>
+              <strong>Recognition and depth estimation</strong>
+              <p>
+                Side-by-side captures of target recognition and Depth Anything
+                V2.
+              </p>
+            </figcaption>
+          </figure>
+          <figure>
+            <a
+              aria-label="Enlarge image: A dataset built from my own photos"
+              class="gallery-link"
+              data-caption="A dataset built from my own photos"
+              data-rotate="false"
+              href="assets/robotics/enova-dataset.jpg"
+              rel="noopener"
+              target="_blank"
+              ><div class="evidence-photo">
+                <img
+                  alt="A dataset built from my own photos"
+                  decoding="async"
+                  loading="lazy"
+                  src="assets/robotics/enova-dataset.jpg"
+                />
+              </div>
+              <span class="zoom-label">View full image ↗</span></a
+            >
+            <figcaption>
+              <strong>A dataset built from my own photos</strong>
+              <p>
+                Training images and visible augmented variants used in the
+                project.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <div class="case-bottom" id="contact">
+        <div>
+          <p class="eyebrow">LET’S TALK ENGINEERING</p>
+          <h2>Have a project in mind?</h2>
+        </div>
+        <a class="button primary" href="mailto:wannesfrajj@gmail.com"
+          >Contact Wannes ↗</a
+        ><a class="text-link" href="edge-ai.html#projects"
+          >Back to robotics projects ←</a
+        >
+      </div>
+    </main>
+    <footer class="container footer">
+      <a class="wordmark" href="index.html"
+        ><span aria-hidden="true" class="monogram">wf</span
+        ><span>Wannes Fraj</span></a
+      >
+      <p>© <span id="year">2026</span> Wannes Fraj</p>
+      <a href="art/thermal-study.html"
+        >Generative visual study <span aria-hidden="true">↗</span></a
+      >
+    </footer>
+    <dialog aria-label="Project photo viewer" class="photo-dialog">
+      <button aria-label="Close photo viewer" class="photo-close" type="button">
+        Close <span aria-hidden="true">×</span>
+      </button>
+      <div class="lightbox-stage"><img alt="" /></div>
+      <p class="photo-caption"></p>
+    </dialog>
+  </body>
+</html>

@@ -1,0 +1,391 @@
+/* AI portfolio: the same skills-first journey as Edge, with its violet palette. */
+.world-automation .automation-intro {
+  padding-block: 28px;
+}
+.automation-intro .world-hero-copy {
+  padding: 0;
+}
+.automation-intro h1 {
+  font-size: clamp(38px, 4.3vw, 60px);
+  letter-spacing: -0.035em;
+  margin-block: 12px 17px;
+}
+.automation-intro h1 br {
+  display: none;
+}
+.automation-intro h1 span {
+  margin-left: 0.2em;
+}
+.automation-intro .world-description {
+  font-size: 15px;
+  max-width: 720px;
+}
+.automation-intro .actions {
+  margin-top: 21px;
+}
+.automation-intro .world-focus {
+  margin-top: 20px;
+}
+.ai-stack {
+  padding-block: 42px 48px;
+}
+.ai-stack-heading {
+  text-align: center;
+}
+.ai-stack-heading h2 {
+  color: var(--accent);
+  font-size: clamp(29px, 3.2vw, 43px);
+  letter-spacing: -0.035em;
+}
+.ai-stack-heading p {
+  margin-top: 12px;
+  font-size: 15px;
+}
+.ai-technology-rail {
+  max-width: 880px;
+  margin: 28px auto 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  cursor: grab;
+  touch-action: pan-x pan-y;
+}
+.ai-technology-rail::-webkit-scrollbar { display: none; }
+.ai-technology-rail.is-dragging { cursor: grabbing; }
+.ai-technology-rail.is-enhanced { user-select: none; }
+.ai-technology-list {
+  display: flex;
+  list-style: none;
+  padding: 8px 0 20px;
+  margin: 0;
+}
+.ai-technology-list li {
+  flex: 0 0 16.6667%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-inline: 6px;
+  text-align: center;
+  font-size: 12px;
+  color: #d4cfe8;
+  scroll-snap-align: start;
+}
+.ai-tech-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+}
+.ai-tech-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.ai-tech-icon:is(.icon-langchain, .icon-ollama, .icon-apachekafka, .icon-django) img {
+  filter: brightness(0) invert(1);
+}
+.ai-tech-icon.icon-n8n img {
+  filter: invert(62%) sepia(43%) saturate(912%) hue-rotate(304deg);
+}
+.ai-tech-icon:is(.icon-numpy, .icon-pandas) img {
+  filter: brightness(1.6);
+}
+.ai-toolkit-details {
+  border-top: 1px solid var(--line);
+  margin-top: 22px;
+}
+.ai-toolkit-details summary,
+.ai-internship-details summary {
+  min-height: 48px;
+  padding-block: 14px;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 14px;
+}
+.ai-toolkit-groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px 32px;
+  padding-block: 16px 12px;
+}
+.ai-toolkit-groups h3,
+.internship-work-grid h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.ai-toolkit-groups p,
+.internship-work-grid p {
+  font-size: 14px;
+}
+.ai-internship {
+  padding-block: 24px 48px;
+}
+.ai-internship-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px 32px;
+  margin-bottom: 28px;
+}
+.ai-internship-heading h2 {
+  font-size: clamp(28px, 3vw, 39px);
+  letter-spacing: -0.035em;
+}
+.ai-internship-heading p {
+  font-size: 13px;
+}
+.ai-internship-feature {
+  display: grid;
+  grid-template-columns: 0.72fr 1.5fr;
+  background: #111426;
+  border: 1px solid #443b5e;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.ai-internship-feature > * { min-width: 0; }
+.internship-organizations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 24px;
+  gap: 32px;
+  background: #171b31;
+}
+.organization {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.organization > span {
+  font-size: 12px;
+  color: #c5c5dc;
+}
+.organization > p {
+  font-size: 14px;
+  color: var(--ink);
+}
+.na-logo {
+  width: 147px;
+  height: 42px;
+  object-fit: contain;
+}
+.tunipages-mark {
+  width: 237px;
+  max-width: 100%;
+  height: 84px;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+  background: #f3f5f8;
+  border-radius: 8px;
+}
+.tunipages-logo {
+  width: 474px;
+  max-width: none;
+  height: 266px;
+}
+.ai-internship-copy {
+  padding: 36px;
+}
+.ai-internship-copy .internship-role {
+  color: var(--accent);
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+.ai-internship-copy h3 {
+  font-size: clamp(27px, 2.8vw, 38px);
+  letter-spacing: -0.035em;
+  margin-bottom: 20px;
+}
+.ai-internship-copy > p:not(.internship-role) {
+  font-size: 15px;
+  margin-bottom: 16px;
+  max-width: 65ch;
+}
+.ai-internship-copy .tags {
+  margin-top: 24px;
+}
+.ai-internship-details {
+  grid-column: 1 / -1;
+  border-top: 1px solid #443b5e;
+  padding-inline: 32px;
+}
+.internship-work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  padding-block: 10px 30px;
+}
+.world-automation .projects-section .section {
+  padding-top: 40px;
+}
+@media (min-width: 821px) {
+  .world-automation .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 0;
+  }
+  .world-automation .project-grid > .project {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+  }
+  .world-automation .project-grid .project-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .world-automation .project-grid .project-link {
+    margin-top: auto;
+  }
+  .world-automation .project-grid .tags {
+    margin-bottom: 24px;
+  }
+  .world-automation .project-grid .project h3 {
+    font-size: clamp(21px, 2vw, 27px);
+  }
+  .world-automation .project-type { gap: 12px; }
+  .world-automation .project-type > span:last-child { flex-shrink: 0; }
+}
+.hackathon-evidence {
+  overflow: hidden;
+  border: 1px solid #443b5e;
+  border-radius: 14px;
+  background: #101526;
+}
+.hackathon-photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+.hackathon-photos a {
+  display: block;
+  min-width: 0;
+}
+.hackathon-photos img {
+  width: 100%;
+  height: auto;
+}
+.hackathon-photos a:focus-visible {
+  outline-offset: -4px;
+}
+.hackathon-evidence figcaption {
+  padding: 18px 20px;
+}
+.hackathon-evidence figcaption strong,
+.hackathon-evidence figcaption span {
+  display: block;
+}
+.hackathon-evidence figcaption strong {
+  font-size: 14px;
+  color: #d9ccfb;
+}
+.hackathon-evidence figcaption span {
+  font-size: 12px;
+  color: var(--slate);
+  margin-top: 4px;
+}
+.eventplanner-main { padding-block: 36px 80px; }
+.eventplanner-header { max-width: 760px; margin-block: 36px 44px; }
+.eventplanner-header h1 { font-size: clamp(40px, 6vw, 76px); letter-spacing: -0.035em; }
+.eventplanner-header > p { margin-top: 20px; max-width: 60ch; font-size: 18px; }
+.eventplanner-header .tags { margin-block: 24px; }
+.eventplanner-story { display: grid; grid-template-columns: minmax(0, 480px) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+.eventplanner-team { margin: 0; }
+.eventplanner-team a { display: block; }
+.eventplanner-team img { width: 100%; height: auto; border-radius: 12px; }
+.eventplanner-team figcaption { color: var(--slate); font-size: 13px; margin-top: 12px; }
+.eventplanner-details section { margin-bottom: 36px; }
+.eventplanner-details h2 { font-size: clamp(26px, 3vw, 38px); margin-bottom: 18px; }
+.eventplanner-details p { max-width: 65ch; }
+.eventplanner-gallery { margin-top: clamp(40px, 6vw, 80px); }
+.eventplanner-gallery h2 { font-size: clamp(28px, 3vw, 40px); margin-bottom: 24px; }
+.eventplanner-gallery figure { margin: 0; max-width: 600px; }
+.eventplanner-gallery a { display: block; }
+.eventplanner-gallery img { width: 100%; height: auto; border-radius: 12px; }
+.eventplanner-gallery figcaption { color: var(--slate); font-size: 13px; margin-top: 12px; }
+.forecast-cover { display: block; overflow: hidden; border-radius: 14px; }
+.forecast-cover img { display: block; width: 100%; height: auto; }
+.forecast-case .eventplanner-header h1 { font-size: clamp(36px, 5vw, 64px); }
+.forecast-application h2,
+.forecast-method h2 { font-size: clamp(28px, 3vw, 40px); margin-bottom: 18px; }
+.forecast-application > p,
+.forecast-method > p { max-width: 70ch; }
+.forecast-application figure { margin: 28px 0 0; max-width: 1000px; }
+.forecast-application figure a { display: block; }
+.forecast-application img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 12px; }
+.forecast-application figcaption { color: var(--slate); font-size: 13px; margin-top: 12px; }
+.forecast-method { margin-block: 56px 36px; }
+.forecast-stages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 48px; margin-top: 32px; }
+.forecast-stages section { border-top: 1px solid var(--line); padding-top: 24px; }
+.forecast-stages h3 { font-size: 23px; margin-bottom: 14px; }
+.forecast-stages p { max-width: 65ch; }
+@media (max-width: 600px) {
+  .forecast-stages { grid-template-columns: 1fr; }
+}
+@media (max-width: 820px) {
+  .eventplanner-story { grid-template-columns: 1fr; }
+  .eventplanner-team { width: 100%; max-width: 480px; }
+  .ai-internship-heading {
+    display: block;
+  }
+  .ai-internship-heading p {
+    margin-top: 12px;
+  }
+  .ai-internship-feature {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .internship-organizations {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .internship-organizations .organization {
+    flex: 1;
+    min-width: 0;
+  }
+  .ai-toolkit-groups,
+  .internship-work-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .automation-intro h1 span { margin-left: 0; }
+  .tunipages-logo { width: 320px; height: auto; }
+  .ai-stack {
+    padding-block: 30px;
+  }
+  .ai-technology-list li {
+    flex-basis: 25%;
+    font-size: 11px;
+  }
+  .ai-tech-icon {
+    width: 44px;
+    height: 44px;
+  }
+  .ai-tech-icon img {
+    width: 37px;
+    height: 37px;
+  }
+  .ai-toolkit-groups,
+  .internship-work-grid {
+    grid-template-columns: 1fr;
+  }
+  .ai-internship-copy {
+    padding: 24px 20px;
+  }
+  .ai-internship-details {
+    padding-inline: 20px;
+  }
+  .internship-organizations {
+    padding: 24px 16px;
+    gap: 16px;
+  }
+  .na-logo {
+    height: auto;
+  }
+  .hackathon-evidence figcaption {
+    padding: 14px;
+  }
+}

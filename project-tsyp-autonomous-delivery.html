@@ -1,0 +1,199 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#090b1b" name="theme-color" />
+    <meta
+      content="Third place at the TSYP 13 IEEE RAS and VTS technical challenge: decentralized autonomous delivery fleets, dynamic routing and V2V communication."
+      name="description"
+    />
+    <title>Autonomous Delivery Fleet · TSYP 13 — Wannes Fraj</title>
+    <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script defer="" src="script.js"></script>
+    <link href="robotics.css" rel="stylesheet" />
+    <script defer="defer" src="robotics.js"></script>
+  </head>
+  <body class="world-edge robotics-case">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav aria-label="Main navigation" class="container nav">
+        <a
+          aria-label="Wannes Fraj — choose a world"
+          class="wordmark"
+          href="index.html"
+          ><span aria-hidden="true" class="monogram">wf</span
+          ><span>Wannes Fraj</span></a
+        >
+        <div aria-label="Portfolio worlds" class="world-tabs" role="group">
+          <a aria-current="page" href="edge-ai.html"
+            ><span aria-hidden="true" class="tab-dot edge-dot"></span>Edge AI
+            <span class="tab-extra">&amp; Robotics</span></a
+          ><a href="ai-automation.html"
+            ><span aria-hidden="true" class="tab-dot ai-dot"></span>AI
+            <span class="tab-extra">&amp;</span> Automation</a
+          >
+        </div>
+        <a class="nav-contact" href="#contact"
+          >Let’s talk <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+    <main class="container case-main" id="main">
+      <a class="back-link" href="edge-ai.html#proj-tsyp"
+        >← All robotics projects</a
+      >
+      <header class="case-header">
+        <p class="eyebrow">IEEE RAS × IEEE VTS / TSYP 13 TECHNICAL CHALLENGE</p>
+        <h1>Autonomous Delivery Fleet</h1>
+        <p class="case-intro">
+          My team’s entry in the TSYP 13 robotics and intelligent transportation
+          challenge, awarded third place. The challenge explores how autonomous
+          delivery vehicles can coordinate in a changing city without a central
+          controller.
+        </p>
+        <div class="tags">
+          <span>ROS 2</span><span>LiDAR</span><span>Gazebo</span
+          ><span>D-VRP</span><span>V2V communication</span>
+        </div>
+        <div class="actions">
+          <a class="button primary" href="#case-details"
+            >Explore the challenge <span aria-hidden="true">↓</span></a
+          ><a
+            class="text-link gallery-link"
+            data-caption="Third place at the TSYP 13 RAS &amp; VTS technical challenge — IEEE ENET’Com Student Branch."
+            href="assets/robotics/tsyp13-award.jpg"
+            rel="noopener noreferrer"
+            target="_blank"
+            >View the award photo <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </header>
+      <figure class="case-cover">
+        <div class="evidence-photo tsyp-award-photo">
+          <img
+            alt="The IEEE ENET’Com team receiving its third-place certificate at the TSYP 13 RAS and VTS challenge"
+            fetchpriority="high"
+            height="1067"
+            src="assets/robotics/tsyp13-award.jpg"
+            width="800"
+          />
+        </div>
+        <figcaption class="tsyp-award-caption">
+          Third place · TSYP 13 RAS &amp; VTS technical challenge · IEEE
+          ENET’Com Student Branch
+        </figcaption>
+      </figure>
+      <div class="case-layout" id="case-details">
+        <aside class="case-facts">
+          <div>
+            <span>CONTEXT</span><strong>TSYP 13 technical challenge</strong>
+          </div>
+          <div><span>RESULT</span><strong>3rd place · Team award</strong></div>
+          <div>
+            <span>TEAM</span><strong>IEEE ENET’Com Student Branch</strong>
+          </div>
+          <div>
+            <span>ORGANIZERS</span
+            ><strong
+              >IEEE RAS Tunisia Section Chapter &amp; IEEE VTS Tunisia Section
+              Chapter</strong
+            >
+          </div>
+        </aside>
+        <div>
+          <section class="case-section">
+            <h2>The challenge</h2>
+            <p>
+              Coordinate a heterogeneous fleet of delivery vehicles in a
+              simulated urban environment. The brief brings together autonomous
+              vehicles, ground robots and drones, with a focus on decentralized
+              logistics and realistic communication limits.
+            </p>
+          </section>
+          <section class="case-section">
+            <h2>Our simulation toolkit</h2>
+            <p>
+              We used ROS 2 with Gazebo for the robotics simulation and LiDAR
+              for environmental sensing. This toolkit supported our work on
+              autonomous mobility within the challenge’s urban simulation
+              setting.
+            </p>
+          </section>
+          <section class="case-section">
+            <h2>Delivery plans that adapt</h2>
+            <p>
+              The core problem is a Dynamic Vehicle Routing Problem (D-VRP):
+              delivery requests arrive, change or get cancelled while vehicles
+              are already moving. Task allocation must account for delivery
+              deadlines, vehicle capacity and available energy.
+            </p>
+          </section>
+          <section class="case-section">
+            <h2>Cooperation without a central controller</h2>
+            <p>
+              The brief calls for vehicles to allocate and adapt tasks through
+              decentralized coordination. Peer-to-peer strategies, swarm
+              intelligence and multi-agent optimization are possible approaches
+              to balancing decisions across the fleet.
+            </p>
+          </section>
+          <section class="case-section">
+            <h2>Communication is part of the problem</h2>
+            <p>
+              Vehicles exchange information within a limited range and at
+              synchronized intervals inspired by 5G V2V connectivity. Routing
+              and cooperation therefore need to account for when other vehicles
+              can be reached, alongside delivery efficiency and energy
+              consumption.
+            </p>
+          </section>
+          <section class="case-section">
+            <h2>Third place at TSYP 13</h2>
+            <p>
+              Our IEEE ENET’Com Student Branch team received third place in the
+              joint RAS and VTS challenge. The award photograph above documents
+              this team result.
+            </p>
+          </section>
+        </div>
+      </div>
+      <div class="case-bottom" id="contact">
+        <div>
+          <p class="eyebrow">LET’S TALK ENGINEERING</p>
+          <h2>Have a project in mind?</h2>
+        </div>
+        <a class="button primary" href="mailto:wannesfrajj@gmail.com"
+          >Contact Wannes ↗</a
+        ><a class="text-link" href="edge-ai.html#projects"
+          >Back to robotics projects ←</a
+        >
+      </div>
+    </main>
+    <footer class="container footer">
+      <a class="wordmark" href="index.html"
+        ><span aria-hidden="true" class="monogram">wf</span
+        ><span>Wannes Fraj</span></a
+      >
+      <p>© <span id="year">2026</span> Wannes Fraj</p>
+      <a href="art/thermal-study.html"
+        >Generative visual study <span aria-hidden="true">↗</span></a
+      >
+    </footer>
+    <dialog aria-label="Project photo viewer" class="photo-dialog">
+      <button aria-label="Close photo viewer" class="photo-close" type="button">
+        Close <span aria-hidden="true">×</span>
+      </button>
+      <div class="lightbox-stage"><img alt="" /></div>
+      <p class="photo-caption"></p>
+    </dialog>
+  </body>
+</html>

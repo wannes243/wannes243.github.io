@@ -1,0 +1,682 @@
+<!doctype html>
+<!--
+    THIS IS A TEMPLATE THAT SHOULD BE USED EVERY TIME AND MODIFIED.
+    WHAT TO KEEP:
+    ✓ Overall structure (header, sidebar, main content)
+    ✓ Anthropic branding (colors, fonts, layout)
+    ✓ Seed navigation section (always include this)
+    ✓ Self-contained artifact (everything inline)
+
+    WHAT TO CREATIVELY EDIT:
+    ✗ The p5.js algorithm (implement YOUR vision)
+    ✗ The parameters (define what YOUR art needs)
+    ✗ The UI controls (match YOUR parameters)
+
+    Let your philosophy guide the implementation.
+    The world is your oyster - be creative!
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attitude Fields ? generative study</title>
+    <script src="../assets/vendor/p5.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Lora:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Anthropic Brand Colors */
+      :root {
+        --anthropic-dark: #141413;
+        --anthropic-light: #faf9f5;
+        --anthropic-mid-gray: #b0aea5;
+        --anthropic-light-gray: #e8e6dc;
+        --anthropic-orange: #d97757;
+        --anthropic-blue: #6a9bcc;
+        --anthropic-green: #788c5d;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(
+          135deg,
+          var(--anthropic-light) 0%,
+          #f5f3ee 100%
+        );
+        min-height: 100vh;
+        color: var(--anthropic-dark);
+      }
+
+      .container {
+        display: flex;
+        min-height: 100vh;
+        padding: 20px;
+        gap: 20px;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: 320px;
+        flex-shrink: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(20, 20, 19, 0.1);
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+
+      .sidebar h1 {
+        font-family: "Lora", serif;
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--anthropic-dark);
+        margin-bottom: 8px;
+      }
+
+      .sidebar .subtitle {
+        color: var(--anthropic-mid-gray);
+        font-size: 14px;
+        margin-bottom: 32px;
+        line-height: 1.4;
+      }
+
+      /* Control Sections */
+      .control-section {
+        margin-bottom: 32px;
+      }
+
+      .control-section h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--anthropic-dark);
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .control-section h3::before {
+        content: "•";
+        color: var(--anthropic-orange);
+        font-weight: bold;
+      }
+
+      /* Seed Controls */
+      .seed-input {
+        width: 100%;
+        background: var(--anthropic-light);
+        padding: 12px;
+        border-radius: 8px;
+        font-family: "Courier New", monospace;
+        font-size: 14px;
+        margin-bottom: 12px;
+        border: 1px solid var(--anthropic-light-gray);
+        text-align: center;
+      }
+
+      .seed-input:focus {
+        outline: none;
+        border-color: var(--anthropic-orange);
+        box-shadow: 0 0 0 2px rgba(217, 119, 87, 0.1);
+        background: white;
+      }
+
+      .seed-controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .regen-button {
+        margin-bottom: 0;
+      }
+
+      /* Parameter Controls */
+      .control-group {
+        margin-bottom: 20px;
+      }
+
+      .control-group label {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--anthropic-dark);
+        margin-bottom: 8px;
+      }
+
+      .slider-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .slider-container input[type="range"] {
+        flex: 1;
+        height: 4px;
+        background: var(--anthropic-light-gray);
+        border-radius: 2px;
+        outline: none;
+        -webkit-appearance: none;
+      }
+
+      .slider-container input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 16px;
+        height: 16px;
+        background: var(--anthropic-orange);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .slider-container input[type="range"]::-webkit-slider-thumb:hover {
+        transform: scale(1.1);
+        background: #c86641;
+      }
+
+      .slider-container input[type="range"]::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+        background: var(--anthropic-orange);
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .value-display {
+        font-family: "Courier New", monospace;
+        font-size: 12px;
+        color: var(--anthropic-mid-gray);
+        min-width: 60px;
+        text-align: right;
+      }
+
+      /* Color Pickers */
+      .color-group {
+        margin-bottom: 16px;
+      }
+
+      .color-group label {
+        display: block;
+        font-size: 12px;
+        color: var(--anthropic-mid-gray);
+        margin-bottom: 4px;
+      }
+
+      .color-picker-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .color-picker-container input[type="color"] {
+        width: 32px;
+        height: 32px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background: none;
+        padding: 0;
+      }
+
+      .color-value {
+        font-family: "Courier New", monospace;
+        font-size: 12px;
+        color: var(--anthropic-mid-gray);
+      }
+
+      /* Buttons */
+      .button {
+        background: var(--anthropic-orange);
+        color: white;
+        border: none;
+        padding: 10px 16px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        width: 100%;
+      }
+
+      .button:hover {
+        background: #c86641;
+        transform: translateY(-1px);
+      }
+
+      .button:active {
+        transform: translateY(0);
+      }
+
+      .button.secondary {
+        background: var(--anthropic-blue);
+      }
+
+      .button.secondary:hover {
+        background: #5a8bb8;
+      }
+
+      .button.tertiary {
+        background: var(--anthropic-green);
+      }
+
+      .button.tertiary:hover {
+        background: #6b7b52;
+      }
+
+      .button-row {
+        display: flex;
+        gap: 8px;
+      }
+
+      .button-row .button {
+        flex: 1;
+      }
+
+      /* Canvas Area */
+      .canvas-area {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+      }
+
+      #canvas-container {
+        width: 100%;
+        max-width: 1000px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(20, 20, 19, 0.1);
+        background: white;
+      }
+
+      #canvas-container canvas {
+        display: block;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      /* Loading State */
+      .loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: var(--anthropic-mid-gray);
+      }
+
+      /* Responsive - Stack on mobile */
+      @media (max-width: 600px) {
+        .container {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          width: 100%;
+        }
+
+        .canvas-area {
+          padding: 20px;
+        }
+      }
+
+      /* Accessible controls; original viewer branding and layout retained. */
+      .sidebar .subtitle,
+      .value-display {
+        color: #64635e;
+      }
+      .button {
+        background: #a84e31;
+      }
+      .button.secondary {
+        background: #396887;
+      }
+      .button:hover {
+        background: #8c4029;
+      }
+      .button.secondary:hover {
+        background: #2c526f;
+      }
+      .button.tertiary:hover {
+        background: #41512c;
+      }
+      .button.tertiary {
+        background: #526737;
+      }
+      :focus-visible {
+        outline: 3px solid #141413 !important;
+        outline-offset: 4px;
+      }
+      input[type="range"] {
+        min-width: 0;
+        min-height: 28px;
+      }
+      .back-link {
+        display: inline-block;
+        margin-top: 22px;
+        color: #396887;
+        font-size: 13px;
+      }
+      @media (max-width: 900px) {
+        .container {
+          flex-direction: column;
+        }
+        .sidebar {
+          width: 100%;
+        }
+        .canvas-area {
+          padding: 0;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Control Sidebar -->
+      <div class="sidebar">
+        <!-- Headers (CUSTOMIZE THIS FOR YOUR ART) -->
+        <h1>Attitude Fields</h1>
+        <div class="subtitle">
+          A seeded study in orientation. An abstract illustration, not a
+          simulation or model result.
+        </div>
+
+        <!-- Seed Section (ALWAYS KEEP THIS) -->
+        <div class="control-section">
+          <h3>Seed</h3>
+          <input
+            type="number"
+            id="seed-input"
+            class="seed-input"
+            value="243"
+            min="1"
+            max="999999"
+            aria-label="Random seed"
+            onchange="updateSeed()"
+          />
+          <div class="seed-controls">
+            <button class="button secondary" onclick="previousSeed()">
+              ← Prev
+            </button>
+            <button class="button secondary" onclick="nextSeed()">
+              Next →
+            </button>
+          </div>
+          <button
+            class="button tertiary regen-button"
+            onclick="randomSeedAndUpdate()"
+          >
+            ↻ Random
+          </button>
+        </div>
+
+        <!-- Parameters Section -->
+        <div class="control-section">
+          <h3>Parameters</h3>
+          <div class="control-group">
+            <label for="bands">Band density</label>
+            <div class="slider-container">
+              <input
+                type="range"
+                id="bands"
+                min="18"
+                max="70"
+                step="1"
+                value="48"
+                oninput="updateParam('bands', this.value)"
+              /><span class="value-display" id="bands-value">48</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="twist">Twist</label>
+            <div class="slider-container">
+              <input
+                type="range"
+                id="twist"
+                min="0.1"
+                max="2"
+                step="0.1"
+                value="1.2"
+                oninput="updateParam('twist', this.value)"
+              /><span class="value-display" id="twist-value">1.2</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="detail">Sampling resolution</label>
+            <div class="slider-container">
+              <input
+                type="range"
+                id="detail"
+                min="90"
+                max="250"
+                step="10"
+                value="180"
+                oninput="updateParam('detail', this.value)"
+              /><span class="value-display" id="detail-value">180</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="tilt">Tilt</label>
+            <div class="slider-container">
+              <input
+                type="range"
+                id="tilt"
+                min="-1"
+                max="1"
+                step="0.1"
+                value="0.5"
+                oninput="updateParam('tilt', this.value)"
+              /><span class="value-display" id="tilt-value">0.5</span>
+            </div>
+          </div>
+        </div>
+        <!-- Actions Section (ALWAYS KEEP THIS) -->
+        <div class="control-section">
+          <h3>Actions</h3>
+          <div class="button-row">
+            <button class="button" onclick="resetParameters()">Reset</button
+            ><button class="button secondary" onclick="exportImage()">
+              Save PNG
+            </button>
+          </div>
+        </div>
+        <a class="back-link" href="../edge-ai.html#projects"
+          >? Back to portfolio</a
+        >
+      </div>
+
+      <!-- Main Canvas Area -->
+      <div class="canvas-area">
+        <div
+          id="canvas-container"
+          role="img"
+          aria-label="Seeded abstract orientation field"
+        >
+          <div class="loading">Preparing the orientation study?</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const defaults = {
+        seed: 243,
+        bands: 48,
+        twist: 1.2,
+        detail: 180,
+        tilt: 0.5,
+      };
+      let params = { ...defaults };
+      let art;
+      // Attitude Fields: seeded, static p5.js illustration. Not scientific telemetry.
+      function renderThermalField(p, settings) {
+        p.randomSeed(settings.seed);
+        p.noiseSeed(settings.seed);
+        p.background("#102941");
+        const phase = p.random(p.TWO_PI);
+        const strands = [];
+        const radius = p.height * 0.34;
+        for (let band = 0; band < settings.bands; band++) {
+          const latitude = p.map(band, 0, settings.bands - 1, -1.43, 1.43);
+          const points = [];
+          for (let sample = 0; sample <= settings.detail; sample++) {
+            const angle = p.map(sample, 0, settings.detail, 0, p.TWO_PI);
+            const noise = p.noise(
+              Math.cos(angle) + 2,
+              Math.sin(angle) + 2,
+              band * 0.09,
+            );
+            const modulation =
+              1 +
+              0.11 * Math.sin(angle * 3 + phase + latitude * settings.twist) +
+              (noise - 0.5) * 0.14;
+            const r = radius * Math.cos(latitude) * modulation;
+            let x = r * Math.cos(angle);
+            const y =
+              radius * Math.sin(latitude) +
+              radius * 0.14 * Math.sin(angle * 2 + latitude * settings.twist);
+            let z = r * Math.sin(angle);
+            const turn = latitude * settings.twist * 0.45;
+            const turnedX = x * Math.cos(turn) - z * Math.sin(turn);
+            z = x * Math.sin(turn) + z * Math.cos(turn);
+            x = turnedX;
+            const tiltedY =
+              y * Math.cos(settings.tilt) - z * Math.sin(settings.tilt);
+            z = y * Math.sin(settings.tilt) + z * Math.cos(settings.tilt);
+            // A final roll gives the composed field an asymmetric axis.
+            const roll = -0.48;
+            points.push({
+              x: p.width * 0.52 + x * Math.cos(roll) - tiltedY * Math.sin(roll),
+              y:
+                p.height * 0.52 + x * Math.sin(roll) + tiltedY * Math.cos(roll),
+              z,
+            });
+          }
+          strands.push(points);
+        }
+        const segments = [];
+        strands.forEach((points, band) =>
+          points
+            .slice(1)
+            .forEach((end, index) =>
+              segments.push({
+                start: points[index],
+                end,
+                band,
+                depth: (end.z + points[index].z) / 2,
+                index,
+              }),
+            ),
+        );
+        segments.sort((a, b) => a.depth - b.depth);
+        p.noFill();
+        for (const segment of segments) {
+          const exposure = p.constrain(
+            p.map(segment.depth, -radius, radius, 0, 1),
+            0,
+            1,
+          );
+          const warm = segment.band > settings.bands * 0.55;
+          const color = p.lerpColor(
+            p.color("#284f74"),
+            p.color(warm ? "#e8b993" : "#a0c7ff"),
+            Math.pow(exposure, 1.8),
+          );
+          p.stroke(color);
+          p.strokeWeight(0.55 + exposure * 1.1);
+          p.line(
+            segment.start.x,
+            segment.start.y,
+            segment.end.x,
+            segment.end.y,
+          );
+          if (
+            segment.index % 17 === 0 &&
+            segment.band % 4 === 0 &&
+            exposure > 0.55
+          ) {
+            p.strokeWeight(2.3);
+            p.point(segment.start.x, segment.start.y);
+          }
+        }
+      }
+
+      art = new p5((p) => {
+        p.setup = () => {
+          p.pixelDensity(1);
+          p.createCanvas(1200, 760).parent("canvas-container");
+          p.noLoop();
+          document.querySelector(".loading").remove();
+        };
+        p.draw = () => {
+          renderThermalField(p, params);
+          window.artReady = true;
+        };
+      });
+      function initializeSystem() {
+        art.redraw();
+      }
+      function updateSeedDisplay() {
+        document.getElementById("seed-input").value = params.seed;
+      }
+      function updateSeed() {
+        const value = Number(document.getElementById("seed-input").value);
+        if (Number.isInteger(value) && value >= 1 && value <= 999999) {
+          params.seed = value;
+          initializeSystem();
+        }
+        updateSeedDisplay();
+      }
+      function previousSeed() {
+        params.seed = Math.max(1, params.seed - 1);
+        updateSeedDisplay();
+        initializeSystem();
+      }
+      function nextSeed() {
+        params.seed = Math.min(999999, params.seed + 1);
+        updateSeedDisplay();
+        initializeSystem();
+      }
+      function randomSeedAndUpdate() {
+        params.seed = Math.floor(Math.random() * 999999) + 1;
+        updateSeedDisplay();
+        initializeSystem();
+      }
+      function updateParam(key, value) {
+        params[key] = Number(value);
+        document.getElementById(key + "-value").textContent = value;
+        initializeSystem();
+      }
+      function resetParameters() {
+        params = { ...defaults };
+        for (const key of ["bands", "twist", "detail", "tilt"]) {
+          document.getElementById(key).value = params[key];
+          document.getElementById(key + "-value").textContent = params[key];
+        }
+        updateSeedDisplay();
+        initializeSystem();
+      }
+      function exportImage() {
+        art.saveCanvas("attitude-fields-" + params.seed, "png");
+      }
+    </script>
+  </body>
+</html>

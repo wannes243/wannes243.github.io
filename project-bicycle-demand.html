@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090b1b" />
+    <meta
+      name="description"
+      content="From rental data exploration and preprocessing to regression model selection and the Bike Planner application."
+    />
+    <title>Bicycle Demand Forecasting &mdash; Wannes Fraj</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="automation.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="world-automation with-wallpaper">
+    <div class="page-wallpaper" aria-hidden="true">
+      <img src="assets/ai-human-neural.webp" alt="" width="1536" height="1024" fetchpriority="high" />
+    </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="container nav" aria-label="Main navigation">
+        <a
+          class="wordmark"
+          href="index.html"
+          aria-label="Wannes Fraj — choose a world"
+          ><span class="monogram" aria-hidden="true">wf</span
+          ><span>Wannes Fraj</span></a
+        >
+        <div class="world-tabs" role="group" aria-label="Portfolio worlds">
+          <a href="edge-ai.html"
+            ><span class="tab-dot edge-dot" aria-hidden="true"></span>Edge AI
+            <span class="tab-extra">&amp; Robotics</span></a
+          ><a href="ai-automation.html" aria-current="page"
+            ><span class="tab-dot ai-dot" aria-hidden="true"></span>AI
+            <span class="tab-extra">&amp;</span> Automation</a
+          >
+        </div>
+        <a class="nav-contact" href="ai-automation.html#contact"
+          >Let’s talk <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+    <main id="main" class="container eventplanner-main forecast-case">
+      <a class="back-link" href="ai-automation.html#proj-bikeshare">&larr; All AI &amp; Automation projects</a>
+      <header class="eventplanner-header">
+        <h1>Bicycle Demand Forecasting</h1>
+        <p>Built for the MindShift 2.0 Hackathon: from understanding rental data to choosing a model that predicts hourly demand.</p>
+        <div class="tags"><span>Python</span><span>Data preprocessing</span><span>Regression</span><span>Model selection</span></div>
+        <a class="button primary" href="https://github.com/SaraSouissi55/hackathon" target="_blank" rel="noopener noreferrer">View project on GitHub <span aria-hidden="true">&#8599;</span></a>
+      </header>
+      <section class="forecast-application" aria-labelledby="application-title">
+        <h2 id="application-title">The Bike Planner application.</h2>
+        <p>Enter time and weather conditions to estimate hourly bicycle rentals. The interface shown here uses Random Forest and Flask, with an optional adjustment for a touristic zone.</p>
+        <figure>
+          <a href="assets/automation/bike-planner-app.png" target="_blank" rel="noopener noreferrer" aria-label="View the Bike Planner application screenshot at full size">
+            <img src="assets/automation/bike-planner-app.png" alt="Bike Planner interface showing time and weather inputs alongside hourly rental predictions" width="1535" height="709" fetchpriority="high" />
+          </a>
+          <figcaption>Bike Planner &middot; Application screenshot</figcaption>
+        </figure>
+      </section>
+      <section class="forecast-method" aria-labelledby="method-title">
+        <h2 id="method-title">From data to a model.</h2>
+        <p>We studied the dataset, prepared the inputs and compared regression models to reduce the gap between predicted and observed rental demand.</p>
+        <div class="forecast-stages">
+          <section><h3>Understand the data</h3><p>We explored the rental dataset and the relationships between demand, time and weather. This analysis helped us understand the target variable and identify useful inputs for prediction.</p></section>
+          <section><h3>Prepare the inputs</h3><p>We preprocessed the data and worked on feature engineering to turn the available variables into model-ready inputs. This preparation connected the initial data analysis to model training.</p></section>
+          <section><h3>Train and compare</h3><p>We trained and evaluated regression models, using a loss function to measure the difference between predicted and actual rental counts. The goal was to reduce prediction error.</p></section>
+          <section><h3>Select for generalization</h3><p>We compared validation performance to guide model selection, looking for low loss on unseen data as well as a good fit during training. The selected model then powered rental predictions in the application.</p></section>
+        </div>
+      </section>
+      <a class="text-link" href="ai-automation.html#proj-bikeshare">Back to AI projects <span aria-hidden="true">&rarr;</span></a>
+    </main>
+    <footer class="container footer">
+      <a class="wordmark" href="index.html"
+        ><span class="monogram" aria-hidden="true">wf</span
+        ><span>Wannes Fraj</span></a
+      >
+      <p>© <span id="year">2026</span> Wannes Fraj</p>
+      <a href="art/thermal-study.html"
+        >Generative visual study <span aria-hidden="true">↗</span></a
+      >
+    </footer>
+  </body>
+</html>

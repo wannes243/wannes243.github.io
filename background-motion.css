@@ -1,0 +1,19 @@
+/* Temporary entry layers use the same framing as the original wallpaper. */
+[data-entry-motion] { overflow: hidden; }
+.world-entry-scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+[data-entry-motion="hands"].entry-motion-running > img { opacity: 0; }
+[data-entry-motion="neural"] .world-entry-scene { z-index: 1; }
+@media (max-width: 600px) {
+  [data-entry-motion="hands"] .world-entry-scene { transform: scale(1.25); }
+  [data-entry-motion="neural"] .world-entry-scene { transform: scale(1.2); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .world-entry-scene { display: none; }
+  [data-entry-motion].entry-motion-running > img { opacity: 1; }
+}

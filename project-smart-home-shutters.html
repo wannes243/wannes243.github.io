@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#090b1b" name="theme-color" />
+    <meta
+      content="A connected roller shutter system that brings together ESP32 firmware, wireless communication, a Flutter app and a physical manual override."
+      name="description"
+    />
+    <title>Smart Home Shutters — Wannes Fraj</title>
+    <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;family=Syne:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script defer="" src="script.js"></script>
+    <link href="robotics.css" rel="stylesheet" />
+    <script defer="defer" src="robotics.js"></script>
+  </head>
+  <body class="world-edge robotics-case">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav aria-label="Main navigation" class="container nav">
+        <a
+          aria-label="Wannes Fraj — choose a world"
+          class="wordmark"
+          href="index.html"
+          ><span aria-hidden="true" class="monogram">wf</span
+          ><span>Wannes Fraj</span></a
+        >
+        <div aria-label="Portfolio worlds" class="world-tabs" role="group">
+          <a aria-current="page" href="edge-ai.html"
+            ><span aria-hidden="true" class="tab-dot edge-dot"></span>Edge AI
+            <span class="tab-extra">&amp; Robotics</span></a
+          ><a href="ai-automation.html"
+            ><span aria-hidden="true" class="tab-dot ai-dot"></span>AI
+            <span class="tab-extra">&amp;</span> Automation</a
+          >
+        </div>
+        <a class="nav-contact" href="#contact"
+          >Let’s talk <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+    <main id="main" class="container case-main">
+      <a class="back-link" href="edge-ai.html#projects"
+        >← All robotics projects</a
+      >
+      <header class="case-header">
+        <p class="eyebrow">Embedded systems & IoT / 2026</p>
+        <h1>Smart Home Shutters</h1>
+        <p class="case-intro">
+          A connected roller shutter system that brings together ESP32 firmware,
+          wireless communication, a Flutter app and a physical manual override.
+        </p>
+        <div class="tags">
+          <span>ESP32</span><span>C++</span><span>BLE</span><span>MQTT</span
+          ><span>Flutter</span><span>PlatformIO</span>
+        </div>
+        <div class="actions">
+          <a
+            class="button primary"
+            href="https://github.com/wannes243/Volets-Connect-s-Application-Flutter-Firmware-ESP32"
+            target="_blank"
+            rel="noopener noreferrer"
+            >View project on GitHub <span aria-hidden="true">↗</span></a
+          ><a class="text-link" href="#case-details">Explore the details ↓</a>
+        </div>
+      </header>
+      <div class="case-cover">
+        <div class="evidence-photo rotated-photo">
+          <img
+            src="assets/robotics/shutters-demo-2.png"
+            alt="Connected shutter prototype controlled from a Flutter phone application"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+      <div class="case-layout" id="case-details">
+        <aside class="case-facts">
+          <div>
+            <span>MY ROLE</span
+            ><strong>ESP32 firmware & Flutter application</strong>
+          </div>
+          <div><span>CONTEXT</span><strong>Academic project</strong></div>
+          <div><span>PERIOD</span><strong>2026</strong></div>
+          <a
+            href="cv%20edga%20ia.pdf"
+            download="Wannes-Fraj-Edge-AI-CV.pdf"
+            class="text-link"
+            >Download my Edge AI CV ↓</a
+          >
+        </aside>
+        <div>
+          <section class="case-section">
+            <h2>The objective</h2>
+            <p>
+              Control a roller shutter from a phone while retaining a physical
+              switch for local operation.
+            </p>
+          </section>
+          <section class="case-section">
+            <h2>Firmware and hardware</h2>
+            <p>
+              The ESP32 manages the control logic and drives a two-channel relay
+              module. The prototype demonstrates the hardware, wired controls
+              and mobile application together.
+            </p>
+          </section>
+          <section class="case-section">
+            <h2>Wireless communication</h2>
+            <p>
+              Bluetooth is used for initial configuration. Once configured,
+              Wi-Fi and MQTT carry commands and state updates between the ESP32
+              and the application.
+            </p>
+          </section>
+          <section class="case-section">
+            <h2>The mobile experience</h2>
+            <p>
+              The Flutter interface provides open, close and stop controls, plus
+              an opening-percentage slider. Manual input takes priority over
+              automatic commands.
+            </p>
+          </section>
+        </div>
+      </div>
+      <section class="case-gallery" aria-labelledby="gallery-title">
+        <p class="eyebrow">PROJECT PHOTOS</p>
+        <h2 id="gallery-title">A closer look at the work.</h2>
+        <p class="gallery-intro">Select a photo to view it in full.</p>
+        <div class="gallery-grid">
+          <figure>
+            <a
+              class="gallery-link"
+              href="assets/robotics/shutters-demo-2.png"
+              target="_blank"
+              rel="noopener"
+              data-rotate="true"
+              data-caption="The complete prototype"
+              aria-label="Enlarge image: The complete prototype"
+              ><div class="evidence-photo rotated-photo">
+                <img
+                  src="assets/robotics/shutters-demo-2.png"
+                  alt="The complete prototype"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <span class="zoom-label">View full image ↗</span></a
+            >
+            <figcaption>
+              <strong>The complete prototype</strong>
+              <p>
+                Phone application, ESP32 wiring and physical control on the
+                demonstration bench.
+              </p>
+            </figcaption>
+          </figure>
+          <figure>
+            <a
+              class="gallery-link"
+              href="assets/robotics/shutters-demo-1.png"
+              target="_blank"
+              rel="noopener"
+              data-rotate="true"
+              data-caption="Mobile and manual control"
+              aria-label="Enlarge image: Mobile and manual control"
+              ><div class="evidence-photo rotated-photo">
+                <img
+                  src="assets/robotics/shutters-demo-1.png"
+                  alt="Mobile and manual control"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <span class="zoom-label">View full image ↗</span></a
+            >
+            <figcaption>
+              <strong>Mobile and manual control</strong>
+              <p>
+                A closer view of the application and the prototype during the
+                demonstration.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <div class="case-bottom" id="contact">
+        <div>
+          <p class="eyebrow">LET’S TALK ENGINEERING</p>
+          <h2>Have a project in mind?</h2>
+        </div>
+        <a class="button primary" href="mailto:wannesfrajj@gmail.com"
+          >Contact Wannes ↗</a
+        ><a class="text-link" href="edge-ai.html#projects"
+          >Back to robotics projects ←</a
+        >
+      </div>
+    </main>
+    <footer class="container footer">
+      <a class="wordmark" href="index.html"
+        ><span aria-hidden="true" class="monogram">wf</span
+        ><span>Wannes Fraj</span></a
+      >
+      <p>© <span id="year">2026</span> Wannes Fraj</p>
+      <a href="art/thermal-study.html"
+        >Generative visual study <span aria-hidden="true">↗</span></a
+      >
+    </footer>
+    <dialog class="photo-dialog" aria-label="Project photo viewer">
+      <button class="photo-close" type="button" aria-label="Close photo viewer">
+        Close <span aria-hidden="true">×</span>
+      </button>
+      <div class="lightbox-stage"><img alt="" /></div>
+      <p class="photo-caption"></p>
+    </dialog>
+  </body>
+</html>
