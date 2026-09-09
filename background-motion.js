@@ -28,7 +28,8 @@
       class: 'world-entry-scene', viewBox: '0 0 1536 1024',
       'aria-hidden': 'true', focusable: 'false',
     });
-    const framing = () => scene.setAttribute('preserveAspectRatio', compact.matches ? 'xMidYMid meet' : 'xMidYMid slice');
+    const layers = [scene];
+    const framing = () => layers.forEach(layer => layer.setAttribute('preserveAspectRatio', compact.matches ? 'xMidYMid meet' : 'xMidYMid slice'));
     framing();
     const definitions = svgElement('defs', {}, scene);
 
@@ -71,14 +72,69 @@
         { opacity: 0 }, { opacity: 0.9, offset: 0.4 }, { opacity: 0 },
       ], { delay: 1200, duration: 1700, easing: 'ease-in-out' });
     } else {
-      // Current follows the existing finger-to-brain connection and branches out.
+      // Move only the hand; the brain stays anchored in the original composition.
+      // Feather the dark gap between them instead of modifying the source image.
+      const artwork = svgElement('svg', {
+        class: 'world-entry-scene world-entry-art', viewBox: '0 0 1536 1024',
+        'aria-hidden': 'true', focusable: 'false',
+      });
+      layers.push(artwork);
+      framing();
+      const artDefinitions = svgElement('defs', {}, artwork);
+      for (const [name, from, to, first, last] of [
+        ['hand', 699, 737, 'white', 'black'],
+        ['brain', 748, 824, 'black', 'white'],
+      ]) {
+        const fade = svgElement('linearGradient', {
+          id: `neural-${name}-fade`, gradientUnits: 'userSpaceOnUse',
+          x1: from, x2: to,
+        }, artDefinitions);
+        svgElement('stop', { offset: '0%', 'stop-color': first }, fade);
+        svgElement('stop', { offset: '100%', 'stop-color': last }, fade);
+        const mask = svgElement('mask', {
+          id: `neural-${name}-mask`, maskUnits: 'userSpaceOnUse',
+          x: 0, y: 0, width: 1536, height: 1024,
+        }, artDefinitions);
+        svgElement('rect', { width: 1536, height: 1024, fill: `url(#neural-${name}-fade)` }, mask);
+      }
+      svgElement('image', {
+        href: original.getAttribute('src'), width: 1536, height: 1024,
+        mask: 'url(#neural-brain-mask)', 'data-motion-part': 'brain',
+      }, artwork);
+      const hand = svgElement('g', { 'data-motion-part': 'approaching-hand' }, artwork);
+      svgElement('image', {
+        href: original.getAttribute('src'), width: 1536, height: 1024,
+        mask: 'url(#neural-hand-mask)',
+      }, hand);
+      animate(hand, [
+        { transform: 'translate(-160px, 26px)' },
+        { transform: 'translate(0px, 0px)' },
+      ], { duration: 2800, easing: 'cubic-bezier(0.4, 0, 0.2, 1)' });
+      // Restore the exact source after the current fades, without a visible cut.
+      animate(artwork, [{ opacity: 1 }, { opacity: 1, offset: 0.88 }, { opacity: 0 }], { duration: 4900 });
+      animate(original, [{ opacity: 0 }, { opacity: 0, offset: 0.88 }, { opacity: 1 }], { duration: 4900 });
+
+      const glow = svgElement('radialGradient', { id: 'neural-contact-glow' }, definitions);
+      svgElement('stop', { offset: '0%', 'stop-color': '#fff4ff', 'stop-opacity': '.9' }, glow);
+      svgElement('stop', { offset: '22%', 'stop-color': '#ceb2ff', 'stop-opacity': '.5' }, glow);
+      svgElement('stop', { offset: '100%', 'stop-color': '#a080ff', 'stop-opacity': '0' }, glow);
+      const contact = svgElement('ellipse', {
+        cx: 690, cy: 510, rx: 64, ry: 44, fill: 'url(#neural-contact-glow)',
+        'data-motion-part': 'contact',
+      }, scene);
+      animate(contact, [
+        { opacity: 0 }, { opacity: 0.85, offset: 0.32 },
+        { opacity: 0.4, offset: 0.7 }, { opacity: 0 },
+      ], { delay: 2200, duration: 1700, easing: 'ease-in-out' });
+
+      // Current starts only as the fingertip reaches the connection.
       const routes = [
-        ['M690 510 C760 501 804 510 857 509 S973 464 1035 480', 200, 1100],
-        ['M1035 480 C1048 431 1077 395 1092 344 S1220 344 1287 295 S1370 243 1450 250', 920, 1600],
-        ['M1035 480 C1090 479 1140 505 1190 523 S1297 457 1350 465 S1430 458 1460 438', 1050, 1550],
-        ['M1035 480 C1010 511 1060 550 1108 584 S1223 587 1290 614 S1380 627 1455 630', 1180, 1550],
-        ['M1035 480 C980 488 971 410 990 386 S1084 385 1117 421 S1201 430 1240 505', 780, 1450],
-        ['M1108 584 C1110 657 1180 685 1250 700 S1375 730 1460 773', 1720, 1350],
+        ['M684 511 L710 503 L727 514 L752 498 L775 507 L802 492 L831 503 L857 509 C917 502 973 464 1035 480', 2300, 850],
+        ['M1035 480 C1048 431 1077 395 1092 344 S1220 344 1287 295 S1370 243 1450 250', 2930, 1350],
+        ['M1035 480 C1090 479 1140 505 1190 523 S1297 457 1350 465 S1430 458 1460 438', 3020, 1350],
+        ['M1035 480 C1010 511 1060 550 1108 584 S1223 587 1290 614 S1380 627 1455 630', 3100, 1350],
+        ['M1035 480 C980 488 971 410 990 386 S1084 385 1117 421 S1201 430 1240 505', 2820, 1250],
+        ['M1108 584 C1110 657 1180 685 1250 700 S1375 730 1460 773', 3450, 1150],
       ];
       for (const [d, delay, duration] of routes) {
         const route = svgElement('path', {
@@ -93,7 +149,7 @@
           { strokeDashoffset: '-1', opacity: 0 },
         ], { delay, duration, easing: 'linear' });
       }
-      for (const [cx, cy, delay] of [[690, 510, 160], [1035, 480, 950], [1092, 344, 1480], [1108, 584, 1670], [1450, 250, 2350], [1460, 438, 2440], [1455, 630, 2600], [1460, 773, 2860]]) {
+      for (const [cx, cy, delay] of [[690, 510, 2250], [1035, 480, 2960], [1092, 344, 3340], [1108, 584, 3440], [1450, 250, 3980], [1460, 438, 4060], [1455, 630, 4140], [1460, 773, 4250]]) {
         const node = svgElement('circle', { cx, cy, r: 6, fill: '#eee6ff' }, scene);
         animate(node, [{ opacity: 0 }, { opacity: 0.95, offset: 0.35 }, { opacity: 0 }], { delay, duration: 620 });
       }
@@ -103,7 +159,7 @@
       if (finished) return;
       finished = true;
       backdrop.classList.remove('entry-motion-running');
-      scene.remove();
+      layers.forEach(layer => layer.remove());
       animations.forEach(animation => animation.cancel());
       document.removeEventListener('visibilitychange', visibility);
       reducedMotion.removeEventListener('change', preference);
@@ -118,7 +174,7 @@
     function preference() { if (reducedMotion.matches) cleanup(); }
 
     // Insert below the existing readability overlay and remove all layers afterward.
-    backdrop.append(scene);
+    backdrop.append(...layers.slice().reverse());
     backdrop.classList.add('entry-motion-running');
     document.addEventListener('visibilitychange', visibility);
     reducedMotion.addEventListener('change', preference);

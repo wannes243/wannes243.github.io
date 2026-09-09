@@ -9,6 +9,7 @@
 }
 [data-entry-motion="hands"].entry-motion-running > img { opacity: 0; }
 [data-entry-motion="neural"] .world-entry-scene { z-index: 1; }
+[data-entry-motion="neural"] .world-entry-art { z-index: auto; }
 @media (max-width: 600px) {
   [data-entry-motion="hands"] .world-entry-scene { transform: scale(1.25); }
   [data-entry-motion="neural"] .world-entry-scene { transform: scale(1.2); }
