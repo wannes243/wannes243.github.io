@@ -20,3 +20,8 @@ The user rejected the added blue sky, waving-hand emoji and rounded typography. 
 The homepage uses locally hosted IBM Plex Sans for display and body, with Segoe UI/Arial fallbacks and font-display swap. Greeting: 400 weight at 62% of the headline; identity: 600 at 31-62px, tracking -0.035em; prose: 16-17px with 1.75 line height. Other routes retain their existing typography. The title still rotates between Wannes Fraj, AI Engineer and Edge AI Engineer with reduced-motion support and no visible pause button, as requested by the user. The overlapping title grid permits wrapping without changing its reserved height.
 
 Actions use restrained blue, 8px corners and no glow. The original portrait has a fine neutral ring. Primary action: Explore my work to #worlds; secondary: native CV disclosure with both existing PDFs. No new factual claims. The user reviewed the local version and authorized pushing this refinement after removal of the title pause button.
+
+
+## WF monogram - 2026-09-10
+
+User confirmed retaining WF while adopting the supplied Mc reference style: compact angular lettering, diagonally offset, silver W and muted blue F on a transparent background. The shared vector in assets/favicon.svg is used for all header/footer monograms and favicons. No enclosing square and no font dependency. Preserve the visible Wannes Fraj wordmark and its accessible link name.

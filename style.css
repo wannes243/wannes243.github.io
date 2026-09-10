@@ -169,18 +169,11 @@ p {
   white-space: nowrap;
 }
 .monogram {
-  display: grid;
-  place-items: center;
+  display: block;
+  flex-shrink: 0;
   width: 34px;
   height: 34px;
-  color: var(--accent);
-  border: 1px solid #59637c;
-  border-radius: 9px;
-  font-family: var(--body);
-  font-size: 23px;
-  font-weight: 500;
-  letter-spacing: -2px;
-  padding-right: 2px;
+  object-fit: contain;
 }
 .world-tabs {
   display: flex;
@@ -1335,7 +1328,6 @@ details[open] .node-toggle {
 .footer .monogram {
   width: 29px;
   height: 29px;
-  font-size: 18px;
 }
 .footer p,
 .footer > a:last-child {
@@ -1788,7 +1780,6 @@ details[open] .node-toggle {
   .monogram {
     width: 30px;
     height: 30px;
-    font-size: 21px;
   }
   .nav-contact {
     grid-column: 2;
