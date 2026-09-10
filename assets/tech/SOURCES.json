@@ -27,6 +27,8 @@
   "mcp": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/modelcontextprotocol.svg",
   "websocket": "Original code-native bidirectional communication symbol",
   "langchain": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/langchain.svg",
+  "langgraph": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/langgraph.svg",
+  "langsmith": "https://raw.githubusercontent.com/langchain-ai/langsmith-docs/main/static/img/langsmith-logo-white.svg",
   "n8n": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/n8n.svg",
   "ollama": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/ollama.svg",
   "django": "https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg",

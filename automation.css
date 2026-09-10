@@ -82,7 +82,7 @@
   height: 48px;
   object-fit: contain;
 }
-.ai-tech-icon:is(.icon-langchain, .icon-ollama, .icon-apachekafka, .icon-django) img {
+.ai-tech-icon:is(.icon-langchain, .icon-langgraph, .icon-langsmith, .icon-mcp, .icon-ollama, .icon-apachekafka, .icon-django) img {
   filter: brightness(0) invert(1);
 }
 .ai-tech-icon.icon-n8n img {

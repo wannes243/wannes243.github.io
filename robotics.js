@@ -48,7 +48,7 @@ if (technologyRail) {
   let hovered = false;
   let focused = false;
   let visible = false;
-  const itemDuration = 2800;
+  const itemDuration = 1400;
   const duration = originalItems.length * itemDuration;
   function syncPlayback() {
     if (!animation) return;
