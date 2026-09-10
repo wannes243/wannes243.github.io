@@ -16,6 +16,21 @@ if (copyButton && navigator.clipboard?.writeText) {
 const year = document.querySelector("#year");
 if (year) year.textContent = new Date().getFullYear();
 
+// Progressive entrance: content remains visible without JavaScript or motion.
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const lifeObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-entering");
+      entry.target.addEventListener("animationend", () => {
+        entry.target.classList.remove("is-entering");
+      }, { once: true });
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".life-reveal").forEach((element) => lifeObserver.observe(element));
+}
+
 // Seeded atmosphere, redrawn only on resize; no perpetual render loop.
 const stars = document.querySelector(".star-field");
 if (stars) {

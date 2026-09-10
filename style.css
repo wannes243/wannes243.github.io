@@ -2594,6 +2594,246 @@ details[open] .node-toggle {
 .wie-tools { margin: 0; }
 .wie-tools > span { color: #d9ccfb; border-color: #51446e; }
 .profile-extras .beyond-certificate { margin-top: 32px; }
+
+/* A compact homepage invitation opens the dedicated personal story. */
+.personal-entry {
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+  margin-top: 36px;
+  padding: 36px;
+  border: 1px solid #393557;
+  border-radius: 16px;
+  background: #101326;
+  transition: border-color 220ms ease, background-color 220ms ease;
+}
+.personal-entry-portrait {
+  width: 116px;
+  height: 116px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.personal-entry h3 {
+  margin-block: 10px 14px;
+  font-size: clamp(25px, 3vw, 34px);
+  letter-spacing: -0.035em;
+}
+.personal-entry-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 22px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 500;
+}
+.personal-entry-action > span { font-size: 20px; }
+.personal-entry:hover, .personal-entry:focus-visible {
+  border-color: var(--accent);
+  background: #141a30;
+}
+.personal-main { padding-block: 36px 72px; }
+.personal-back { min-height: 44px; }
+.personal-life { padding-top: clamp(36px, 5vw, 64px); }
+.personal-channel {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+  margin-top: 64px;
+  padding: 36px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #101326;
+}
+.channel-mark {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgb(255 0 51 / 8%);
+}
+.channel-copy h2 { margin-block: 10px 14px; font-size: 30px; letter-spacing: -0.035em; }
+.channel-copy > p:last-child { max-width: 50ch; }
+.channel-link { display: grid; gap: 6px; padding-block: 12px; font-size: 14px; }
+.channel-link > span:first-child { color: var(--accent); font-weight: 500; }
+.channel-link > span:first-child > span { display: inline-block; margin-left: 12px; }
+.channel-link:hover > span:first-child { text-decoration: underline; text-underline-offset: 4px; }
+.channel-handle { color: var(--slate); font-size: 12px; }
+@media (max-width: 1000px) {
+  .personal-channel { grid-template-columns: 64px minmax(0, 1fr); gap: 20px 24px; }
+  .channel-mark { align-self: start; }
+  .channel-link { grid-column: 2; justify-self: start; }
+}
+@media (max-width: 600px) {
+  .personal-channel { grid-template-columns: minmax(0, 1fr); padding: 24px; }
+  .channel-mark { width: 52px; height: 52px; border-radius: 12px; }
+  .channel-link { grid-column: auto; }
+}
+.personal-return {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+.personal-intro { max-width: 700px; margin-bottom: 52px; }
+.personal-intro h1 {
+  margin-block: 18px 24px;
+  font-size: clamp(32px, 4vw, 52px);
+  letter-spacing: -0.04em;
+}
+.personal-intro > p:last-child { max-width: 590px; font-size: 18px; }
+.life-chapter {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+.life-copy { min-width: 0; }
+.life-copy h2, .life-sea h2 {
+  margin-block: 16px 22px;
+  font-size: clamp(26px, 3vw, 38px);
+  letter-spacing: -0.035em;
+}
+.life-copy > p:not(.eyebrow):not(.life-discipline) { max-width: 42ch; }
+.life-copy .life-discipline {
+  margin-top: 24px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+}
+.life-discipline span { padding-inline: 8px; color: var(--slate); }
+.life-gallery { display: grid; gap: 12px; min-width: 0; }
+.mountain-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.mountain-gallery .life-photo { aspect-ratio: 1; }
+.life-photo {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--ice);
+}
+.life-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 450ms ease;
+}
+.mountain-summit img { object-position: 64% center; }
+.mountain-trail img { object-position: center 60%; }
+.mountain-rassas img { object-position: center 38%; }
+.mountain-sunset img { object-position: center 45%; }
+.life-caption { grid-column: 1 / -1; font-size: 12px; line-height: 1.6; }
+.life-sea {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+  margin-block: 56px;
+  padding: 40px 0;
+  border-block: 1px solid var(--line);
+}
+.life-sea h2 { max-width: 12ch; }
+.sea-gallery { grid-template-columns: minmax(0, 1fr); }
+.sea-gallery .life-photo { aspect-ratio: 2; }
+.sea-marina img { object-position: center 52%; }
+.sea-boat img { object-position: 42% center; }
+.life-mma { grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr); }
+.life-mma .life-copy { grid-column: 2; grid-row: 1; }
+.life-mma .mma-gallery { grid-column: 1; grid-row: 1; }
+.mma-gallery { grid-template-columns: 1fr 1fr; }
+.mma-action, .mma-team { aspect-ratio: 3 / 4; }
+.mma-action img { object-position: 48% center; }
+.mma-team img { object-position: center; }
+.life-photo[aria-haspopup="dialog"] { cursor: zoom-in; }
+
+/* Native dialog keeps full photographs in the story, with keyboard support. */
+body.is-viewing-photo { overflow: hidden; }
+.photo-viewer {
+  width: min(1180px, calc(100% - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--cloud);
+  color: var(--ink);
+}
+.photo-viewer::backdrop { background: rgb(3 5 14 / 92%); }
+.photo-viewer-shell { padding: 20px; }
+.photo-viewer-toolbar, .photo-viewer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.photo-viewer-toolbar h2 { font: 500 16px/1.5 var(--body); letter-spacing: 0; }
+.photo-viewer button {
+  display: inline-grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--ice);
+}
+.photo-viewer button:hover { border-color: var(--accent); }
+.photo-viewer .photo-viewer-close { display: inline-flex; align-items: center; gap: 8px; }
+.photo-viewer figure { margin-block: 16px; }
+.photo-viewer-image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(66dvh, 760px);
+  margin-inline: auto;
+  object-fit: contain;
+}
+.photo-viewer figcaption { margin-top: 16px; color: var(--slate); font-size: 14px; }
+.photo-viewer-footer a { font-size: 13px; text-decoration: underline; text-underline-offset: 4px; }
+.photo-viewer-navigation { display: flex; align-items: center; gap: 12px; }
+.photo-viewer-count { min-width: 5ch; color: var(--slate); font: 12px/1.5 var(--mono); text-align: center; }
+@media (max-width: 480px) {
+  .photo-viewer-shell { padding: 14px; }
+  .photo-viewer-toolbar h2 { font-size: 14px; }
+  .photo-viewer-image { max-height: 60dvh; }
+  .photo-viewer-footer { gap: 8px; flex-wrap: wrap; }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .life-photo:hover img { transform: scale(1.035); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .life-reveal.is-entering { animation: life-enter 700ms cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+  @keyframes life-enter {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+@media (max-width: 760px) {
+  .personal-entry { grid-template-columns: 80px minmax(0, 1fr); gap: 22px; padding: 24px; }
+  .personal-entry-portrait { width: 80px; height: 80px; align-self: start; }
+  .personal-intro { margin-bottom: 36px; }
+  .personal-intro > p:last-child { font-size: 16px; }
+  .life-chapter, .life-sea { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .life-copy > p:not(.eyebrow):not(.life-discipline) { max-width: 55ch; }
+  .life-copy h2 br { display: none; }
+  .life-copy .life-discipline { margin-top: 18px; }
+  .life-sea { margin-block: 36px; padding-block: 32px; gap: 20px; }
+  .life-sea h2 { max-width: none; }
+  .life-mma .life-copy, .life-mma .mma-gallery { grid-column: auto; grid-row: auto; }
+  .life-gallery { gap: 8px; }
+  .life-caption { margin-top: 4px; }
+}
+@media (max-width: 480px) {
+  .personal-entry { grid-template-columns: minmax(0, 1fr); }
+  .personal-entry-portrait { width: 72px; height: 72px; }
+}
 @media (max-width: 760px) {
   .wie-experience { grid-template-columns: 1fr; gap: 24px; padding: 24px; }
   .wie-identity { flex-direction: row; justify-content: flex-start; padding: 0 0 24px; border-right: 0; border-bottom: 1px solid #51446e; text-align: left; }
