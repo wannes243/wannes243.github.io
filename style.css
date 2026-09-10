@@ -2882,9 +2882,8 @@ details[open] .node-toggle {
 .life-mma { grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr); }
 .life-mma .life-copy { grid-column: 2; grid-row: 1; }
 .life-mma .mma-gallery { grid-column: 1; grid-row: 1; }
-.mma-gallery { grid-template-columns: 1fr 1fr; }
-.mma-action, .mma-team { aspect-ratio: 3 / 4; }
-.mma-action img { object-position: 48% center; }
+.mma-gallery { grid-template-columns: minmax(0, 1fr); width: 100%; max-width: 420px; justify-self: center; }
+.mma-team { aspect-ratio: 3 / 4; }
 .mma-team img { object-position: center; }
 .life-photo[aria-haspopup="dialog"] { cursor: zoom-in; }
 

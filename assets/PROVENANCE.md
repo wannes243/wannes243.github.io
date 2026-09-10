@@ -6,7 +6,6 @@ User-supplied photos exported as WebP under `assets/life/`. No generative change
 
 - `forest-trail.webp`: `Screenshot 2026-09-10 87.png`, replacing the earlier forest photo at the user's request.
 - `mount-rassas.webp`: `WhatsApp Image 2026-09-10 at az.jpeg`.
-- `bjj-grappling.webp`: `WhatsApp Image 2026-09-azeazeazeat 11.46.31.jpeg`.
 - `summit-sunset.webp`: `zazaazz.jpeg`.
 - `mount-zaghouan.webp`: `azeaze.jpeg`.
 - `mma-team.webp`: `a.jpeg`; replaces `bjj-mats.webp` in the displayed MMA gallery.
