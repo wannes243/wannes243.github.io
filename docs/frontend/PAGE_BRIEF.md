@@ -3,8 +3,8 @@
 - Stage: existing portfolio, user-requested visual and information-architecture redesign.
 - Users: technical recruiters, engineering teams and internship supervisors.
 - Primary task: choose an engineering domain, assess its projects and download the corresponding CV.
-- Entry: index.html, an immediate two-world gateway. No mixed project feed at the entrance.
-- First decision: Edge AI & Robotics versus AI & Automation.
+- Entry: index.html, a personal introduction with rotating engineering titles and an original portrait, followed by the two-world gateway. No mixed project feed at the entrance.
+- First decision: explore the work or view a domain-specific CV; project exploration then offers Edge AI & Robotics versus AI & Automation.
 - Edge route: edge-ai.html. Smart Home Shutters, CubeSat, existing additional robotics projects; Enova experience; perception/robotics/embedded stack; Edge AI CV.
 - Automation route: ai-automation.html. EventPlanner, Bicycle Demand Forecasting; Tunipage experience; agents/ML/MLOps stack; AI & MLOps CV.
 - Shared identity: biography, education and IEEE volunteering on the gateway; direct contact in every world.
