@@ -26,7 +26,7 @@ if (aiRail) {
 
   function tick(time) {
     if (previousTime) {
-      position = (position + Math.min(time - previousTime, 50) * 0.07) % cycleWidth;
+      position = (position + Math.min(time - previousTime, 50) * 0.08) % cycleWidth;
       aiRail.scrollLeft = position;
     }
     previousTime = time;
