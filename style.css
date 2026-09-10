@@ -2882,9 +2882,9 @@ details[open] .node-toggle {
 .life-mma { grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr); }
 .life-mma .life-copy { grid-column: 2; grid-row: 1; }
 .life-mma .mma-gallery { grid-column: 1; grid-row: 1; }
-.mma-gallery { grid-template-columns: minmax(0, 1fr); width: 100%; max-width: 420px; justify-self: center; }
-.mma-team { aspect-ratio: 3 / 4; }
-.mma-team img { object-position: center; }
+.mma-gallery { grid-template-columns: minmax(0, 1fr); width: 100%; }
+.mma-team { aspect-ratio: 4 / 3; }
+.mma-team img { object-position: center 42%; }
 .life-photo[aria-haspopup="dialog"] { cursor: zoom-in; }
 
 /* Native dialog keeps full photographs in the story, with keyboard support. */
