@@ -1,4 +1,4 @@
-/* AI portfolio: the same skills-first journey as Edge, with its violet palette. */
+/* AI portfolio: projects first, with the existing violet palette. */
 .world-automation .automation-intro {
   padding-block: 28px;
 }
@@ -293,7 +293,9 @@
 .eventplanner-header > p { margin-top: 20px; max-width: 60ch; font-size: 18px; }
 .eventplanner-header .tags { margin-block: 24px; }
 .eventplanner-story { display: grid; grid-template-columns: minmax(0, 480px) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
-.eventplanner-team { margin: 0; }
+.eventplanner-team { margin: 0; grid-column: 1; grid-row: 1; }
+.eventplanner-details { grid-column: 2; grid-row: 1; }
+.eventplanner-case .page-wallpaper::after { background: rgb(9 11 27 / 84%); }
 .eventplanner-team a { display: block; }
 .eventplanner-team img { width: 100%; height: auto; border-radius: 12px; }
 .eventplanner-team figcaption { color: var(--slate); font-size: 13px; margin-top: 12px; }
@@ -327,7 +329,8 @@
 }
 @media (max-width: 820px) {
   .eventplanner-story { grid-template-columns: 1fr; }
-  .eventplanner-team { width: 100%; max-width: 480px; }
+  .eventplanner-team { width: 100%; max-width: 480px; grid-column: auto; grid-row: auto; }
+  .eventplanner-details { grid-column: auto; grid-row: auto; }
   .ai-internship-heading {
     display: block;
   }

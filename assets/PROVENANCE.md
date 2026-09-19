@@ -29,3 +29,7 @@ User-supplied photos exported as WebP under `assets/life/`. No generative change
 Typography: Outfit and Syne served through Google Fonts. The earlier Space Grotesk pairing was superseded by the user?s CSTAM reference. System sans-serif and monospace fallbacks are defined.
 
 - `two-worlds.webp`: original Higgsfield two-part conceptual artwork, job `6f108886-ad81-41bd-8f03-7e505e0714b7`, 2026-09-09. Requested nano_banana_pro; completed by provider using nano_banana_2. Exported at 1920px wide as WebP (about 145KB). CSS positions each half in the corresponding universe. The source PNG is retained in the session temporary directory. No CSTAM artwork was reused.
+
+## Lossless project image delivery - 2026-09-19
+
+`robotics/shutters-demo-1.webp` and `robotics/shutters-demo-2.webp` are lossless WebP exports of the existing PNG screenshots, without cropping or visual changes. Original PNGs remain linked as full-size images. Combined display payload decreased from 936,984 to 523,382 bytes.

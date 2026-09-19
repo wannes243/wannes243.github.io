@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#090b1b" />
     <meta
       name="description"
-      content="Portfolio de Wannes Fraj : projets en intelligence artificielle, robotique, systèmes embarqués et automatisation."
+      content="Explore Wannes Fraj's projects in AI, robotics, embedded systems and workflow automation."
     />
     <title>Wannes Fraj — Portfolio</title>
     <link rel="canonical" href="https://wannes243.github.io/" />
@@ -15,17 +15,17 @@
     <meta property="og:title" content="Wannes Fraj — Portfolio" />
     <meta
       property="og:description"
-      content="Portfolio de Wannes Fraj : projets en intelligence artificielle, robotique, systèmes embarqués et automatisation."
+      content="Explore Wannes Fraj's projects in AI, robotics, embedded systems and workflow automation."
     />
     <meta property="og:url" content="https://wannes243.github.io/" />
-    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:image" content="https://wannes243.github.io/1788490773755.jpg" />
     <meta property="og:image:alt" content="Portrait de Wannes Fraj" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Wannes Fraj — Portfolio" />
     <meta
       name="twitter:description"
-      content="Portfolio de Wannes Fraj : projets en intelligence artificielle, robotique, systèmes embarqués et automatisation."
+      content="Explore Wannes Fraj's projects in AI, robotics, embedded systems and workflow automation."
     />
     <meta name="twitter:image" content="https://wannes243.github.io/1788490773755.jpg" />
     <meta name="twitter:image:alt" content="Portrait de Wannes Fraj" />
@@ -35,6 +35,7 @@
     <script src="script.js" defer></script>
     <script src="home-hero.js" defer></script>
     <script src="profile-stack.js" defer></script>
+    <script src="home-skills.js" defer></script>
   </head>
   <body class="world-gateway with-wallpaper">
     <div class="page-wallpaper" aria-hidden="true">
@@ -46,10 +47,11 @@
         <a
           class="wordmark"
           href="index.html"
-          aria-label="Wannes Fraj — choose a world"
+          aria-label="Wannes Fraj — homepage"
           ><img class="monogram" src="assets/favicon.svg" alt="" width="34" height="34" aria-hidden="true" /><span>Wannes Fraj</span></a
         >
         <div class="world-tabs" role="group" aria-label="Portfolio worlds">
+          <a class="nav-projects" href="#projects">Projects</a>
           <a href="edge-ai.html"
             ><span class="tab-dot edge-dot" aria-hidden="true"></span>Edge AI
             <span class="tab-extra">&amp; Robotics</span></a
@@ -76,16 +78,13 @@
                 <span class="intro-role">Edge AI Engineer</span>
               </span>
             </h1>
-            <div class="intro-specialty">
-              <span>Software intelligence. Real-world impact.</span>
-            </div>
-            <p class="intro-description">I’m an Industrial Computer Engineering student at ENET’Com, exploring AI, robotics and embedded systems. From training models to building backends and getting intelligence to run on devices, I enjoy bringing the whole system together.</p>
+            <p class="intro-description">Industrial Computer Engineering student at ENET’Com. I build AI systems, robotics applications and automated workflows.</p>
             <div class="intro-details">
               <span><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Monastir, Tunisia</span>
               <span><i class="intro-status" aria-hidden="true"></i>Open to internship opportunities</span>
             </div>
             <div class="intro-actions">
-              <a class="intro-cta intro-cta-primary" href="#worlds">Explore my work <span aria-hidden="true">↗</span></a>
+              <a class="intro-cta intro-cta-primary" href="#projects">View my projects <span aria-hidden="true">↓</span></a>
               <details class="intro-cv">
                 <summary class="intro-cta">View my CV <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 8 5 5 5-5"/></svg></summary>
                 <div class="intro-cv-menu">
@@ -105,58 +104,81 @@
           </figure>
         </div>
       </section>
-      <section class="gateway-hero" id="worlds" aria-labelledby="gateway-title">
+      <section class="home-skills container" id="skills" aria-labelledby="home-skills-title">
+        <h2 id="home-skills-title">Skills &amp; technologies</h2>
+        <div class="home-skills-rows">
+          <div class="home-skill-row">
+            <h3 id="home-edge-skills">Edge AI &amp; Robotics</h3>
+            <div class="home-skills-rail" role="region" aria-labelledby="home-edge-skills" tabindex="0">
+              <ul>
+              <li><img src="assets/tech/ros.svg" alt="" width="64" height="64" loading="lazy" /><span>ROS 2</span></li>
+              <li><img src="assets/tech/gazebo.svg" alt="" width="64" height="64" loading="lazy" /><span>Gazebo</span></li>
+              <li><img src="assets/tech/opencv.svg" alt="" width="64" height="64" loading="lazy" /><span>OpenCV</span></li>
+              <li><img src="assets/tech/cplusplus.svg" alt="" width="64" height="64" loading="lazy" /><span>C++</span></li>
+              <li><img src="assets/tech/esp32.svg" alt="" width="64" height="64" loading="lazy" /><span>ESP32</span></li>
+              <li><img src="assets/tech/platformio.svg" alt="" width="64" height="64" loading="lazy" /><span>PlatformIO</span></li>
+              <li><img src="assets/tech/matlab.svg" alt="" width="64" height="64" loading="lazy" /><span>MATLAB</span></li>
+              <li><img src="assets/tech/mqtt.svg" alt="" width="64" height="64" loading="lazy" /><span>MQTT</span></li>
+              <li><img src="assets/tech/apachekafka.svg" alt="" width="64" height="64" loading="lazy" /><span>Apache Kafka</span></li>
+            </ul>
+            </div>
+          </div>
+          <div class="home-skill-row">
+            <h3 id="home-ai-skills">AI &amp; Automation</h3>
+            <div class="home-skills-rail" role="region" aria-labelledby="home-ai-skills" tabindex="0">
+              <ul>
+              <li><img src="assets/tech/python.svg" alt="" width="64" height="64" loading="lazy" /><span>Python</span></li>
+              <li><img src="assets/tech/pytorch.svg" alt="" width="64" height="64" loading="lazy" /><span>PyTorch</span></li>
+              <li><img src="assets/tech/langchain.svg" alt="" width="64" height="64" loading="lazy" /><span>LangChain</span></li>
+              <li><img src="assets/tech/langgraph.svg" alt="" width="64" height="64" loading="lazy" /><span>LangGraph</span></li>
+              <li><img src="assets/tech/mcp.svg" alt="" width="64" height="64" loading="lazy" /><span>MCP</span></li>
+              <li><img src="assets/tech/n8n.svg" alt="" width="64" height="64" loading="lazy" /><span>n8n</span></li>
+              <li><img src="assets/tech/ollama.svg" alt="" width="64" height="64" loading="lazy" /><span>Ollama</span></li>
+              <li><img src="assets/tech/fastapi.svg" alt="" width="64" height="64" loading="lazy" /><span>FastAPI</span></li>
+              <li><img src="assets/tech/docker.svg" alt="" width="64" height="64" loading="lazy" /><span>Docker</span></li>
+              <li><img src="assets/tech/kubernetes.svg" alt="" width="64" height="64" loading="lazy" /><span>Kubernetes</span></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="gateway-hero projects-gateway" id="projects" aria-labelledby="gateway-title">
+        <span id="worlds" aria-hidden="true"></span>
         <div class="container gateway-inner">
           <div class="gateway-intro">
-            <p class="eyebrow">WANNES FRAJ / ENGINEERING PORTFOLIO</p>
-            <h2 id="gateway-title">One mind.<span>Two worlds.</span></h2>
-            <p>
-              From intelligent machines to autonomous workflows.<br />Choose a
-              world. Discover what I build.
-            </p>
+            <h2 id="gateway-title">My projects</h2>
+            <p>Explore what I build in robotics and AI automation.</p>
           </div>
           <div class="world-portals">
-            <a class="portal portal-edge" href="edge-ai.html"
+            <a class="portal portal-edge" href="edge-ai.html#projects"
               ><div class="portal-art" aria-hidden="true">
                 <img class="portal-image" src="assets/edge-robot-studio.webp" alt="" width="1536" height="1024" />
-                <span class="portal-coordinate">PERCEPTION → MOTION</span>
               </div>
               <div class="portal-content">
-                <p class="eyebrow">THE PHYSICAL WORLD</p>
-                <h2>Edge AI <span>&amp; Robotics</span></h2>
+                <h3>Edge AI <span>&amp; Robotics</span></h3>
                 <p>
-                  Intelligence that sees, senses and moves.<br />Robotics,
-                  computer vision and embedded systems.
+                  Person-following robots, smart shutters and CubeSat thermal prediction.
                 </p>
                 <div class="portal-entry">
-                  Enter my Edge AI world
+                  View robotics projects
                   <span class="portal-arrow" aria-hidden="true">↗</span>
                 </div>
               </div></a
-            ><a class="portal portal-ai" href="ai-automation.html"
+            ><a class="portal portal-ai" href="ai-automation.html#projects"
               ><div class="portal-art" aria-hidden="true">
-                <div class="portal-image"></div>
-                <span class="portal-coordinate">REASONING → ACTION</span>
+                <svg class="portal-image" viewBox="1080 180 720 720" aria-hidden="true" focusable="false"><defs><clipPath id="ai-artwork-crop"><rect x="1080" y="180" width="720" height="720" /></clipPath></defs><image href="assets/two-worlds.webp" width="1920" height="1080" clip-path="url(#ai-artwork-crop)" /></svg>
               </div>
               <div class="portal-content">
-                <p class="eyebrow">THE DIGITAL WORLD</p>
-                <h2>AI <span>&amp; Automation</span></h2>
+                <h3>AI <span>&amp; Automation</span></h3>
                 <p>
-                  Intelligence that reasons, connects and delivers.<br />AI
-                  agents, machine learning and production systems.
+                  EventPlanner, bicycle demand forecasting and machine learning applications.
                 </p>
                 <div class="portal-entry">
-                  Enter my AI world
+                  View AI projects
                   <span class="portal-arrow" aria-hidden="true">↗</span>
                 </div>
               </div></a
             >
-          </div>
-          <div class="gateway-foot">
-            <span>ENET’Com · Engineering student</span
-            ><a href="#about"
-              >Meet the engineer <span aria-hidden="true">↑</span></a
-            ><span>Based in Tunisia</span>
           </div>
         </div>
       </section>
@@ -186,7 +208,7 @@
         <div class="card-stack" id="experience-track">
         <article class="wie-experience" aria-labelledby="na-role-title">
           <div class="wie-identity">
-            <img class="company-logo" src="assets/automation/na-consulting-logo.png" alt="NA Consulting" width="147" height="42" loading="lazy" />
+            <svg class="company-logo tunipages-company-logo" viewBox="125 85 225 100" width="225" height="100" role="img" aria-label="TuniPages"><image href="assets/automation/tunipages-logo.png" width="474" height="266" /></svg>
             <p>NA Consulting<br />Monastir, Tunisia</p>
           </div>
           <div class="wie-content">
