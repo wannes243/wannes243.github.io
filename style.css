@@ -2728,7 +2728,80 @@ details[open] .node-toggle {
 .wie-responsibilities li + li { margin-top: 10px; }
 .wie-tools { margin: 0; }
 .wie-tools > span { color: #d9ccfb; border-color: #51446e; }
-.profile-extras .beyond-certificate { margin-top: 32px; }
+.certifications { margin-top: 48px; }
+.stack-heading h2 { margin: 0; }
+.card-stack {
+  --stack-top: 112px;
+  display: grid;
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+  position: relative;
+  isolation: isolate;
+  gap: 36px;
+  margin-top: 28px;
+  padding-bottom: clamp(64px, 14vh, 140px);
+}
+.card-stack > article {
+  position: relative;
+  min-width: 0;
+  margin-top: 0;
+  align-self: stretch;
+}
+.card-stack.is-measured > article { position: sticky; top: var(--stack-top); }
+.card-stack > article:nth-child(1) { z-index: 1; }
+.card-stack > article:nth-child(2) { z-index: 2; }
+.card-stack > article:nth-child(3) { z-index: 3; }
+.card-stack .wie-heading h3 { flex: 1 1 420px; }
+.card-stack .wie-heading p { white-space: nowrap; }
+.card-stack .wie-content { min-width: 0; }
+.wie-identity .company-logo { width: 196px; padding: 16px 12px; }
+.experience-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 12px; font-size: 15px; }
+@media (max-width: 760px) {
+  .card-stack { gap: 28px; }
+  .card-stack > article { grid-template-rows: auto 1fr; }
+  .wie-identity .company-logo { width: 120px; flex-shrink: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-stack.is-measured > article { position: relative; top: auto; }
+  .card-stack { padding-bottom: 0; }
+}
+.certificate-card {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 40px;
+  margin-top: 24px;
+  padding: 36px;
+  border: 1px solid #393557;
+  border-radius: 16px;
+  background: #101326;
+}
+.certificate-identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding-right: 32px;
+  border-right: 1px solid #51446e;
+  text-align: center;
+}
+.certificate-identity img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.certificate-identity p { color: #c5c5dc; font-size: 13px; }
+.certificate-content { min-width: 0; }
+.certificate-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; }
+.certificate-heading h3 { flex: 1 1 360px; font-size: clamp(23px, 2.5vw, 30px); letter-spacing: -0.02em; line-height: 1.25; }
+.certificate-heading time { color: #c5c5dc; font-size: 14px; white-space: nowrap; }
+.certificate-detail { margin-top: 16px; color: var(--slate); font-size: 16px; }
+.certificate-topics { margin: 20px 0 12px; }
+.certificate-topics > span { color: #d9ccfb; border-color: #51446e; }
+.certificate-link { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 8px; min-height: 44px; padding-block: 8px; font-size: 15px; }
+.certificate-format { color: #c5c5dc; font-size: 12px; }
+@media (max-width: 760px) {
+  .certificate-card { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 24px; }
+  .certificate-identity { flex-direction: row; justify-content: flex-start; gap: 20px; padding: 0 0 24px; border-right: 0; border-bottom: 1px solid #51446e; text-align: left; }
+  .certificate-identity img { width: 120px; flex-shrink: 0; }
+  .certificate-heading { gap: 12px; }
+}
 
 /* A compact homepage invitation opens the dedicated personal story. */
 .personal-entry {

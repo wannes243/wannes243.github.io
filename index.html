@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <script src="home-hero.js" defer></script>
+    <script src="profile-stack.js" defer></script>
   </head>
   <body class="world-gateway with-wallpaper">
     <div class="page-wallpaper" aria-hidden="true">
@@ -178,7 +179,53 @@
           </div>
         </section>
       <section class="section container profile-extras" aria-labelledby="extras-title" id="beyond">
-        <h2 id="extras-title">Beyond the curriculum</h2>
+        <div class="profile-stack" aria-labelledby="extras-title" role="region">
+        <div class="stack-heading">
+          <h2 id="extras-title">Experience</h2>
+        </div>
+        <div class="card-stack" id="experience-track">
+        <article class="wie-experience" aria-labelledby="na-role-title">
+          <div class="wie-identity">
+            <img class="company-logo" src="assets/automation/na-consulting-logo.png" alt="NA Consulting" width="147" height="42" loading="lazy" />
+            <p>NA Consulting<br />Monastir, Tunisia</p>
+          </div>
+          <div class="wie-content">
+            <header class="wie-heading">
+              <h3 id="na-role-title">AI &amp; DevOps Intern · NA Consulting</h3>
+              <p>July 2026 – Present</p>
+            </header>
+            <ul class="wie-responsibilities">
+              <li>Resolve platform-wide failures caused by concurrent AI requests on TuniPages.</li>
+              <li>Redesign the Django backend, API layer and database interactions.</li>
+              <li>Deploy the architecture with Docker, Kubernetes and GitLab CI/CD.</li>
+            </ul>
+            <div class="tags wie-tools" aria-label="Technologies">
+              <span>AI engineering</span><span>Django</span><span>Docker</span><span>Kubernetes</span>
+            </div>
+            <a class="inline-link experience-link" href="ai-automation.html#experience">Explore my experience <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="wie-experience" aria-labelledby="enova-role-title">
+          <div class="wie-identity">
+            <img class="company-logo" src="assets/robotics/enova-logo.png" alt="ENOVA Robotics" width="2015" height="631" loading="lazy" />
+            <p>ENOVA Robotics<br />Sousse, Tunisia</p>
+          </div>
+          <div class="wie-content">
+            <header class="wie-heading">
+              <h3 id="enova-role-title">Deep Learning &amp; Computer Vision · ENOVA Robotics</h3>
+              <p>June – July 2026</p>
+            </header>
+            <ul class="wie-responsibilities">
+              <li>Build a real-time person-following system for a mobile robot.</li>
+              <li>Combine person detection, tracking, depth estimation and face recognition.</li>
+              <li>Connect perception and robot control through four ROS 2 nodes.</li>
+            </ul>
+            <div class="tags wie-tools" aria-label="Technologies">
+              <span>ROS 2</span><span>Python</span><span>YOLOv8</span><span>ByteTrack</span>
+            </div>
+            <a class="inline-link experience-link" href="project-enova-person-following.html">Explore my experience <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
         <article class="wie-experience" aria-labelledby="wie-role-title">
           <div class="wie-identity">
             <img src="assets/wie-enetcom-logo.png" alt="IEEE Women in Engineering ENET’Com" width="211" height="183" loading="lazy" />
@@ -199,11 +246,49 @@
             </div>
           </div>
         </article>
-          <div class="background-item beyond-certificate">
-            <span class="mono">2026</span>
-            <h3>NVIDIA Deep Learning Institute</h3>
-            <a class="inline-link" href="https://learn.nvidia.com/certificates?id=EyxXZlxsQkmyEMXxsQ-U_" rel="noopener noreferrer" target="_blank">View Deep Learning certificate <span aria-hidden="true">↗</span></a>
+        </div>
+        </div>
+        <section class="certifications profile-stack" aria-labelledby="certifications-title" id="certifications">
+          <div class="stack-heading">
+          <h2 id="certifications-title">Certifications</h2>
           </div>
+          <div class="card-stack" id="certification-track">
+          <article class="certificate-card" aria-labelledby="reinforcement-learning-title">
+            <div class="certificate-identity">
+              <img src="assets/certifications/reinforcement-learning.png" alt="Preview of the DataCamp Reinforcement Learning certificate" width="765" height="442" loading="lazy" />
+              <p>DataCamp</p>
+            </div>
+            <div class="certificate-content">
+              <header class="certificate-heading">
+                <h3 id="reinforcement-learning-title">Reinforcement Learning with Gymnasium in Python</h3>
+                <time datetime="2026-09-19">Sep 19, 2026</time>
+              </header>
+              <p class="certificate-detail">4-hour course completed</p>
+              <div class="tags certificate-topics" aria-label="Course topics">
+                <span>Reinforcement Learning</span><span>Gymnasium</span><span>Python</span>
+              </div>
+              <a class="inline-link certificate-link" aria-label="View Reinforcement Learning certificate (PDF, opens in a new tab)" href="assets/certifications/reinforcement-learning.pdf" rel="noopener noreferrer" target="_blank">View certificate <span class="certificate-format">PDF</span><span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article class="certificate-card" aria-labelledby="deep-learning-title">
+            <div class="certificate-identity">
+              <img src="assets/certifications/deep-learning.png" alt="Preview of the NVIDIA Deep Learning certificate" width="674" height="521" loading="lazy" />
+              <p>NVIDIA<br />Deep Learning Institute</p>
+            </div>
+            <div class="certificate-content">
+              <header class="certificate-heading">
+                <h3 id="deep-learning-title">Fundamentals of Deep Learning</h3>
+                <time datetime="2026-01-03">Jan 3, 2026</time>
+              </header>
+              <p class="certificate-detail">Certificate of competency</p>
+              <div class="tags certificate-topics" aria-label="Course topics">
+                <span>Deep Learning</span>
+              </div>
+              <a class="inline-link certificate-link" aria-label="View Deep Learning certificate (PDF, opens in a new tab)" href="assets/certifications/deep-learning.pdf" rel="noopener noreferrer" target="_blank">View certificate <span class="certificate-format">PDF</span><span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          </div>
+        </section>
         <a class="personal-entry" href="who-is-wannes.html" aria-labelledby="personal-entry-title" aria-describedby="personal-entry-description">
           <img class="personal-entry-portrait" src="1788490773755.jpg" alt="" width="400" height="400" loading="lazy" />
           <div class="personal-entry-copy">

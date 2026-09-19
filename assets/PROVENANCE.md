@@ -1,5 +1,10 @@
 # Visual sources
 
+## Experience carousel — 2026-09-19
+
+- `robotics/enova-logo.png`: official ENOVA Robotics logo, downloaded unchanged from https://www.enovarobotics.eu/wp-content/uploads/2020/03/logoEnovaRobotics-1.png (organization logo declared on its official website).
+- NA Consulting and IEEE WIE reuse the portfolio's existing logo files.
+
 ## Personal photos — 2026-09-10
 
 User-supplied photos exported as WebP under `assets/life/`. No generative changes; original proportions preserved. Display crops are CSS only, and image links show each full export.
